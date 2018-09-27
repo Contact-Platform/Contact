@@ -1,0 +1,10 @@
+#hero {
+  height: 90vh;
+  /* background by SVGBackgrounds.com */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23ed7d31' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23c55a11' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23ef8842' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23cd6118' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23f19252' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23d5681f' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23f29d62' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23dd6f25' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23f3a773' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23e5762b' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23f4b183' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23ed7d31' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-color: #fbe5d6;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

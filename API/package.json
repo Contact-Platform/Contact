@@ -1,0 +1,21 @@
+{
+  "name": "NodejsStarterApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "@cloudant/cloudant": "^2.3.0",
+    "body-parser": "^1.18.3",
+    "cfenv": "1.0.x",
+    "cors": "^2.8.4",
+    "date-and-time": "^0.6.2",
+    "express": "^4.16.3",
+    "watson-developer-cloud": "^3.7.1"
+  },
+  "repository": {},
+  "engines": {
+    "node": "6.x"
+  }
+}

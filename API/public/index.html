@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel='icon' href='images/contact-logo.ico' />
+  <title>Contact | Real Time Open Communication Platform.</title>
+  <meta name="description" content="Contact is a Real Time Open Communication Platform.">
+
+  <!-- TailwindCSS START -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  <!-- TailwindCSS END -->
+
+  <!-- Chart.js START -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <!-- Chart.js  END -->
+
+  <!-- jQuery START -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- jQuery END -->
+
+  <!-- D3js START -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+  <!-- D3js  END -->
+
+  <!-- Word Cloud START -->
+  <script src="js/cloud.js"></script>
+  <!-- Word Cloud END -->
+
+  <!-- Leaflet START -->
+  <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+    crossorigin=""></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin="" />
+  <!-- Leaflet END -->
+
+</head>
+
+<body class="font-sans bg-grey-lighter">
+  <nav class="bg-black py-2 px-4 border-t-4 border-orange mb-16">
+    <div class="container m-auto flex items-center justify-between flex-wrap">
+      <div class="flex items-center flex-no-shrink text-white mr-6">
+        <img height="54" width="54" src="images/contact-logo.png" alt="contact logo">
+        <span class="font-semibold text-xl tracking-tight">Contact</span>
+      </div>
+      <div class="block lg:hidden">
+        <button id="menu-btn" class="flex items-center px-3 py-2 border rounded text-grey border-grey hover:text-white hover:border-white">
+          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+      <div id='menu' class="w-full block flex-grow hidden lg:flex lg:items-center lg:w-auto">
+        <div class="text-sm lg:flex-grow">
+          <a href="index.html" class="no-underline block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white mr-4">
+            Home
+          </a>
+          <a href="analyze.html" class="no-underline block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white mr-4">
+            Analyze
+          </a>
+          <a href="location.html" class="no-underline block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white">
+            Locations
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="px-4">
+    <div class="bg-white container mx-auto py-6 rounded shadow-md text-center text-black text-xl sm:text-2xl leading-normal">
+      <div class="flex md:flex-row flex-col">
+        <div class="w-full md:w-1/3">
+          <div class="text-green border-b-2 border-r-0 md:border-b-0 md:border-r-2 border-grey-light inline-block md:block pb-4">
+            <span class="text-5xl font-semibold" id="positive-number">0</span>
+            <p class="uppercase tracking-wide text-grey-dark text-xl">Positive Messages</p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/3">
+          <div class="border-b-2 border-r-0 md:border-b-0 md:border-r-2 border-grey-light inline-block md:block pb-4">
+            <span class="text-orange text-5xl font-semibold" id="neutral-number">0</span>
+            <p class="uppercase tracking-wide text-grey-dark text-xl">Neutral Messages</p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/3 pb-4">
+          <span class="text-red text-5xl font-semibold" id="negative-number">0</span>
+          <p class="uppercase tracking-wide text-grey-dark text-xl">Negative Messages</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="h-full py-8 px-4">
+    <div class="container mx-auto">
+      <div class="rounded shadow w-full py-4 pr-2 bg-white mb-4">
+        <h3 class="font-semibold capitalize text-xl sm:text-2xl mb-6 leading-none pl-4">Flagged words</h3>
+        <div id="wordcloud" class="w-full h-64"></div>
+      </div>
+      <div class="rounded shadow w-full py-4 pr-2 bg-white mb-4">
+        <h3 class="font-semibold capitalize text-xl sm:text-2xl mb-6 leading-none pl-4">Tone Analysis</h3>
+        <canvas id="tone-analyzer"></canvas>
+      </div>
+      <div class="rounded shadow w-full py-4 pr-2 bg-white mb-4">
+        <h3 class="font-semibold capitalize text-xl sm:text-2xl mb-6 leading-none pl-4">Emotion Analysis</h3>
+        <canvas id="sentiment"></canvas>
+      </div>
+      <div class="rounded shadow w-full py-4 px-2 bg-white">
+        <h3 class="font-semibold capitalize text-xl sm:text-2xl mb-6 leading-none pl-4">Locations</h3>
+        <div id="map" class="w-full h-64"></div>
+      </div>
+    </div>
+  </div>
+  <script src="js/header.js"></script>
+  <script src="js/messages.js"></script>
+  <script src="js/wordcloud.js"></script>
+  <script src="js/toneChart.js"></script>
+  <script src="js/sentimentChart.js"></script>
+  <script src="js/map.js"></script>
+</body>
+
+</html>
