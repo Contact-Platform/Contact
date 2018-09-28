@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+    <title>Goverment Data</title>
+    <style>
+        body { font-family: Arial, Helvetica, sans-serif;
+            margin: 5% auto;
+            background: whitesmoke}
+        #container {
+            width: 100%;
+            text-align: center;
+            vertical-align: middle;
+        }
+        #form-data {
+            margin: 0 auto;
+            width: 70%;
+            background: ghostwhite;
+            box-shadow: 0px 0px 6px black;
+        }
+        #btns {
+            border-top: 1px solid gray;
+            margin-top: 22px;
+            padding: 8px;
+            text-align: right;
+        }
+        h2 {
+            display: block;
+            margin-bottom: 0px;
+            border: 1px solid gray;
+            padding: 6px;
+        }
+        h4 {
+            color: gray;
+        }
+        label {
+            font-size: medium;
+            display:inline-block;
+            width: 40%;
+            margin: 4px 6px;
+        }
+        input[type='text'], input[type='number'] {
+            font-size: medium;
+            border: 1px solid lightgrey;
+            outline: none;
+            box-shadow: none;
+            border-radius: 3px;
+            padding: 8px 4px;
+            margin: 4px 2px;
+        }
+        form {
+            text-align: left;
+            border: 1px solid gray;
+            padding: 10px;
+        }
+        button {
+            padding: 8px;
+            border-radius: 3px;
+            background: #4284f4;
+            color: white;
+            margin: 10px 4px;
+            font-size: medium;
+            border: none;
+            box-shadow: 0px 0px 4px gray;  
+        }
+        button:hover {
+            background: #0d47a1;
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id='form-data'>
+            <h2>GOVERNMENT DATA FORM - DEMO</h2>
+            <form id='form'>
+                <h4>Municipality Basic Data</h4>
+                <label>Municipality Name?</label>
+                <input type='text' name='town' id='town' maxlength='40' placeholder='City'><br>
+                <label>How many Refugees?</label>
+                <input type='number' name='refugees' id='refugees' value='0' maxlength='6'><br>
+                <h4>Supplies:</h4>
+                <label>How many Water Packages (20 bottles each)?</label>
+                <input type='number' name='water' id='water' value='0' maxlength='3' min='0'max='250'><br>
+                <label>How many Food Packages (3 meals x day x person)?</label>
+                <input type='number' name='food' id='food' value='0' maxlength='3' min='0' max='500'><br>        
+                <div id='btns'>
+                    <button onclick='sendData();'>Send Your Request</button>
+                </div>
+                <div id='datos'></div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function sendData() {
+            var jsonData = jsonForm(document.getElementById('form'));
+            /* Replace CONTACT by your Unit Name */
+            SendToServer(jsonData, 'CONTACT'); 
+            document.getElementById('datos').innerHTML += 
+                '<pre>'  + jsonData + '</pre><br>';            
+        }
+
+        function jsonForm(form) {  
+            /* var objects = []; */ 
+            var jsonString = "{data[{";
+            if (typeof form == 'object' && form.nodeName.toLowerCase() == "form") {  
+                var fields = form.getElementsByTagName("input");  
+                for(var i=0;i<fields.length;i++){ 
+                    var n = fields[i].getAttribute('name'); 
+                    var v = document.getElementById(n).value;
+
+                    jsonString += "'" + n + "':'" + v + "',";
+                    //objects[objects.length] = { name: fields[i].getAttribute("name"), value: fields[i].getAttribute("value") };  
+                }  
+                jsonString = jsonString.substr(0, jsonString.length - 1);
+                jsonString += "]}";
+            }  
+            return jsonString;  
+        }      
+        function SendToServer(msg, unit) {         
+            fetch('http://1.2.3.4/put?message=' + msg + '&unit=' + unit + '&usr=JSON'
+                , {mode: 'no-cors'})
+                .then(response => response.json())
+                .then(json => console.log(json))
+                .catch(function(error) {  
+                    console.log('Request failed', error)  
+                });
+        }   
+    
+    </script>
+    
+</body>
+</html>
