@@ -182,7 +182,7 @@ const location_DB = 'YOUR_LOCATION_DB_NAME_HERE';
 ### 7. Run your API locally
 
  1. To run your API locally run `npm start`.
- 1. You can access the running app in a browser at <http://localhost:6002>.
+ 1. You can access the running app in a browser at <http://localhost:6001>.
  1. Start typing things into the form and either wait for it to automatically refresh or refresh the page to see the what watson found on your messages.
 
  > **Pro Tip:** If you plan to make some changes, which I hope you do, and you don't want to shut your server on and off a million times; run `npm i -g nodemon` and `nodemon`. This will automatically restart your server whenever you save.  
@@ -214,7 +214,7 @@ We have **two** forms `analyze.html` and `location.html`.
 
 #### analyze.html
 
-You can access this through <http://localhost:6002/analyze.html>. To input data to the API we start by:
+You can access this through <http://localhost:6001/analyze.html>. To input data to the API we start by:
 
 1. Taking the content you want analyzed and converting it into a JSON String,
     ``` javascript
@@ -267,7 +267,7 @@ Here's an example of it all together:
 
 #### location.html
 
-You can access this through <http://localhost:6002/location.html>. What we do here is basically the same thing, we take all the different inputs make them a JSON string and send them to our [/api/add/location](####/api/add/location) route:
+You can access this through <http://localhost:6001/location.html>. What we do here is basically the same thing, we take all the different inputs make them a JSON string and send them to our [/api/add/location](####/api/add/location) route:
 
 ``` html
 <form id="form">
@@ -393,7 +393,7 @@ db.insert(doc, (err, data) => {
 
 This is the main output route of the API, **why?** well because this route returns every single row in your database you just have to pass the name of the database as a parameter.  
 
-If you followed all the steps you should have three databases so go to <http://localhost:6002/api/get/all/> and add the name of one of your databases, you should see a response full of unformatted JSON. Now, you get to decide what you do with this. It's obviously not very pretty, readable or useable but with some time and effort you can try and make [something beautiful](##Demo) and useful out of them.
+If you followed all the steps you should have three databases so go to <http://localhost:6001/api/get/all/> and add the name of one of your databases, you should see a response full of unformatted JSON. Now, you get to decide what you do with this. It's obviously not very pretty, readable or useable but with some time and effort you can try and make [something beautiful](##Demo) and useful out of them.
 
 ##### ___/api/get/___
 
@@ -483,7 +483,7 @@ Here are some screenshots of what we did with ours so feel free to make this you
 - [Watson Tone Analyzer (TA)](https://www.ibm.com/watson/services/tone-analyzer/ "TA Homepage"): Understand emotions and communication style in text.
 - [IBM Cloudant](https://www.ibm.com/cloud/cloudant "Cloudant Homepage"): A scalable JSON document database for web, mobile, IoT and serverless applications.  
 - [Cloud Foundry](https://www.cloudfoundry.org/ "Cloud Foundry Homepage"): Makes it faster and easier to build, test, deploy and scale applications, providing a choice of clouds, developer frameworks, and application services. It's open source and available through a variety of private cloud distributions and public cloud instances (e.g. IBM Cloud).
-- [IBM Continous Delivery](https://www.ibm.com/cloud/continuous-delivery): Embrace DevOps in an enterprise-ready way. Create toolchains that support your app delivery tasks. Automate builds, tests, deployments, and more.  
+- [IBM Continuous Delivery](https://www.ibm.com/cloud/continuous-delivery): Embrace DevOps in an enterprise-ready way. Create toolchains that support your app delivery tasks. Automate builds, tests, deployments, and more.  
 - [MapBox](https://www.mapbox.com/): An open source mapping platform for custom designed maps. Our APIs and SDKs are the building blocks to integrate location into any mobile or web app.  
 
 [Jump back to top](#top)
