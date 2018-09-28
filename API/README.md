@@ -484,5 +484,6 @@ Here are some screenshots of what we did with ours so feel free to make this you
 - [IBM Cloudant](https://www.ibm.com/cloud/cloudant "Cloudant Homepage"): A scalable JSON document database for web, mobile, IoT and serverless applications.  
 - [Cloud Foundry](https://www.cloudfoundry.org/ "Cloud Foundry Homepage"): Makes it faster and easier to build, test, deploy and scale applications, providing a choice of clouds, developer frameworks, and application services. It's open source and available through a variety of private cloud distributions and public cloud instances (e.g. IBM Cloud).
 - [IBM Continous Delivery](https://www.ibm.com/cloud/continuous-delivery): Embrace DevOps in an enterprise-ready way. Create toolchains that support your app delivery tasks. Automate builds, tests, deployments, and more.  
+- [MapBox](https://www.mapbox.com/): An open source mapping platform for custom designed maps. Our APIs and SDKs are the building blocks to integrate location into any mobile or web app.  
 
 [Jump back to top](#top)

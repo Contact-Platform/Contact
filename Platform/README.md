@@ -4,6 +4,8 @@ Contact combines the use of an IoT device that includes a LoRa transmitter and a
 
 To be able to use the capacity of this device to the maximum, an elaborated coding is necessary.
 
+![Contact Platform](/Platform/images/contact-architecture.png)
+
 This is why the integration of multiple programming languages ​​such as C++, HTML, Javascript and CSS is necessary. In addition to the use of tools that facilitate the integration of all these.
 
 The Contact code is divided into two layers. 
@@ -85,6 +87,11 @@ Another very important option is the ability to forward messages to other units.
     }
          
 ```
+
+### Application Interfaces
+
+The main 
+
 
 
 
