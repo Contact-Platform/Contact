@@ -3,6 +3,8 @@
 ## What is CONTACT?
 An open platform that brings together software and hardware to allow everyone to communicate up to eight mile radius.
 
+![Contact Concept](/Platform/images/concept.png)
+
 ## Why did we create CONTACT?
 During and after an emergency, communication with communities is critical.
 
@@ -16,6 +18,8 @@ Well-conceived and effectively delivered emergency messages can help ensure publ
 
 ## How does it Work?
 - Contact combines the use of an IoT device that includes a LoRa transmitter and an ESP32 microcontroller to provide communication access up to eight miles away.
+
+![Contact Hardware](/Platform/images/hardware.png)
 
 - It's the same as using the Internet in a Hotspot. It is not necessary to download additional applications, you only need a device with WiFi and a Web Browser.
 
