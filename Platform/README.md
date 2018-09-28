@@ -11,49 +11,82 @@ The Contact code is divided into two layers.
 - The second layer allows all the communication functions between the devices and the interaction with the device by the user. This second layer is encoded in HTML, Javascript and CSS.
 
 ## Contact's Code
-### Communication and Instruction Process
-The device has two hardware components. A LoRa module that allows the transmission of data over long distances and an ESP32 microcontroller that allows the process of instructions, create a web server, accept Wi-Fi communication and other functions such as adding a GPS module.
+### Communication and Instruction Process 
 
-- It is possible to reach *up to 8 miles* away in a communication. Within cities with buildings or structures allows a communication of up to two miles, even within structures. But it is possible to double or triple the distance when using the units with a simple MESH.
-[imagen lista online communities]
-- Is an alternative way of *taking communications trough hard places*. In most emergency incidents, mainly in natural disasters, geography or lack of access do not allow communication.
+The device has two hardware components. A LoRa module that allows the transmission of data over long distances and an ESP32 microcontroller that allows the process of instructions, create a web server, accept Wi-Fi communications and other functions such as adding a GPS module.
 
-### Ease of Access
-- The price is very affordable, the cost is $11.00 to produce a unit. But it can be less by producing more units in a bigger scale.
-[imagen por dentro]
+In order to receive and send messages, the unit uses the LoRa module and the WiFi network in the ESP32 at the same time through asynchronous functions and the elaboration of queues or stacks. Each received message is stored in a queue until the contact web communication interface requests the information. It is an advantage, because the user can access the last 50 messages received to the unit immediately connect through the web browser.
 
-### Hardware Flexibility
-- It is *Portable*, it's measure only 3.1 inches (8cm) x 2 inches (5cm). But we know that it can be smaller.
-[imagenes o fotos]
-- It uses *rechargeable batteries* (3.7v 3.6aH, 18650) that can extend its use up to *30 continuous hours*. It *can be recharged and used with any power source*, such as power banks for cell phones, small solar panels or the Eton Red Cross Charger.
-[imagen conectado]
+##### [Hardware Code]
 
-### Scalability
-- It uses a *frequency free of licenses* for Industry, Science and Medicine (900-Mhz frequencies, ISM band) in the United States. But it is possible to select **other LoRa license-free frequencies for other Countries** through a configuration screen.
-[setup]
-- It can be *used as an open network platform to send any form data*. It has sending or receiving functions through specific RESTful technology.
-[imagen formulario]
-[enlace código]
-- It **can be used as a Network or Internet Gateway** to send all received messages to another network, the Internet,  [Contact API]() or another platform such as Twilio.
-[imagen]
-- *Beacon and Geolocation Integration*. It allowing it to be used as a Beacon to locate people in other rescue situations. By using a powerful open-technology microcontroller (ESP32) you can extend the capacity of the device while maintaining low cost and performance. 
-[imagen]
+```cpp
 
-## CALL FOR CODE + CONTACT
-We believe that everyone has creative ideas. We, in response to **Call for Code**, develop the **Contact** capabilities around the powerful tools of **IBM Cloud** to demonstrate that it is a powerful platform that can grow.
-[enlace to dashboard]
-[enlace to github Janiel]
+int nTTL_MAX = 2;                 // Time-To-Live Package (MESH)
+
+#define MAX_TX_MESSAGES 15
+#define MAX_RX_MESSAGES 50
+#define MAX_UNITS 10
+#define DATA_SIZE 500
+
+typedef struct MESSAGE_TYPE {
+  int  packetId;  
+  char TxID[12];
+  char RxID[12];
+  char data[DATA_SIZE];
+  int  packetsQty;
+  int  packetCtr;
+  int  packetType; // 1-Txt; 2-Sound; 3-Image; 4-Hand Shake; 5-Alert; 6-JSON
+  int  ttl;
+  int  packetQId;
+  byte  sender; // 0 - Me; 1 - Him
+};
+
+MESSAGE_TYPE rx_message_queue[MAX_RX_MESSAGES];
+MESSAGE_TYPE tx_message_queue[MAX_TX_MESSAGES];
+
+```
+
+Another very important option is the ability to forward messages to other units. For this, each package is created with a specific structure using the JSON technology and it is checked if the message belongs to the unit or if it is necessary to send the package again.
+
+```cpp
+    String content = incoming; 
+    Serial.println(content);
+      
+    // Allocate JsonBuffer
+    // Use arduinojson.org/assistant to compute the capacity.
+    const size_t capacity = JSON_OBJECT_SIZE(8) + 600; 
+    DynamicJsonBuffer jsonBuffer; //(capacity); 
+    /* Parse JSON object */
+    JsonObject& root = jsonBuffer.parseObject(content);
+    if (!root.success()) {
+    return;
+    }
+
+    root.prettyPrintTo(Serial);
+
+    if (strcmp(root["txid"].as<char*>(), hostName) == 0) {
+        return;
+    }
+
+    char* all = "ALL";
+
+    // If Unit is a Gateway, Receive Any Message
+    if (CONTACTvars.isGateway == 1)     
+        root["rxid"] =  "ALL"; 
+    // If Receiver is other Unit foward the message
+    if ((strcmp(root["rxid"].as<char*>(), all) == 0) && ((root["ttl"].as<int>() - 1) > 0)
+        && (strcmp(root["rxid"].as<char*>(), hostName) == 0))
+    { // Simple Mesh Network
+        Serial.println(Serial.println(root["rxid"].as<char*>()));
+        root["ttl"] = String(root["ttl"].as<int>() - 1);
+        root.printTo(MESH_MSG);
+        sendLoRaMsgToOther = true;
+        return;
+    }
+         
+```
 
 
-That is a reason why we provide a complete *Open Communication Platform* that allows others to control the hardware and the data directly; the people can create custom interfaces and even send the data to other platforms.
-[enlace to github Contact Unit]
-[enlace a pantallas]
 
-<Añadir información de Janiel de como trabaja>
+[Hardware Code]: https://github.com/Contact-Platform/Contact/blob/master/Platform/device/device.ino "Contact Main Code"
 
-
-[setup]: https://github.com/jdastas/contact-platform/setup.png "Contact Setup Screen"
-
-
-[setup]: https://github.com/jdastas/contact-platform/setup.png "Contact Setup Screen"
-[gateway]: https://github.com/jdastas/contact-platform/gateway.png "Internet Gateway"
