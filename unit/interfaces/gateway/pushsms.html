@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Push Messages to Server</title>
+    <style>
+        html, body, #content { 
+            font-family: Helvetica, Geneva, Verdana, sans-serif;
+            background: rgb(247, 213, 194);
+            height: 100%; width: 100%; margin: 0; padding:0;
+            overflow: hidden; border-top: 1px solid orange;}
+        #content {overflow: none;}
+        header, footer { border-bottom: 1px solid lightgray;
+        padding: 4px 8px; margin-bottom: 10px; background: rgb(37, 40, 43);}
+        footer {position: fixed; left: 0; bottom: -14px; width: 100%;}
+        h1 {font-weight: bolder; font-size: x-large; margin: 4px; color: white;}
+        h3 {font-weight: lighter; font-size: medium; margin: 6px; color: darkgrey;}
+        h4 {font-weight: lighter; font-size: small; margin: 6px; color: lightgrey;}
+        main { margin: 0px; width: 100%; height: 100%;
+            overflow: hidden; overflow-y: auto; background: white; }
+        #sms-list {overflow-y: auto;width: 100%; height: 100%;}
+        #titleH, #row {display: block; border-bottom: 1px solid lightgrey;}
+        #senderH, #msgH { display: inline-block; text-align: center;
+            font-weight: bolder; vertical-align: middle;
+            color: grey;
+            height: 30px; line-height: 30px;}
+        #msgH, #sms {padding-left: 8px; }
+        #senderH, #unit {width: 15%; text-align: center; 
+            border-right: 1px solid whitesmoke; }
+        #unit, #sms { display: inline-block;vertical-align: middle;
+            font-family: 'Courier New', Courier, monospace;
+            height: 30px; line-height: 30px; color: black}
+        #sms {word-wrap: break-word;}
+        #smsCtr {display: inline;}
+        @media (max-width: 812px) { 
+            #unit, #sms {
+                height: auto;
+                vertical-align: top;
+            }
+            #senderH span {
+                display: none;
+            }
+            #senderH:after {
+                content: 'Unit';
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id='content'>
+        <header>
+            <h1>CONTACT</h1>
+            <h3>MESSAGES SENDED FROM ONLINE LOCATIONS</h3>
+        </header>
+        <main>
+            <div id='sms-list'>
+                <div id='titleH'><div id='senderH'><span>LOCATION</span></div><div id='msgH'>MESSAGE</div></div>
+                <!-- <div id='row'><div id='unit'>RED-CROSS</div><div id='sms'>Esto es un ejemplo.</div></div> -->
+            </div>
+        </main>     
+        <footer>
+            <h4><div id='smsCtr'></div>&nbsp;Messages received from Online Locations Units.</h4>
+        </footer>  
+    </div>   
+    <script>
+        var smsCtr = 0;
+        var lastMsgReaded = 0;
+        var bFirstTime = true;
+        if (sessionStorage.getItem('bFirstTime') != null) {
+            bFirstTime = false;
+            lastMsgReaded = sessionStorage.getItem('lastMsgReaded');
+            smsCtr = sessionStorage.getItem('smsCtr');
+        } else {
+            sessionStorage.setItem('bFistTime',  false);
+            sessionStorage.setItem('smsCtr',  smsCtr);
+        }
+        document.getElementById('smsCtr').innerText = smsCtr;
+                
+        SendSMSToServer();    
+        setInterval(SendSMSToServer, 7000);
+
+        function SendSMSToServer() {
+            var msgs = '';
+            var aSMS = new Array();
+            var smsServer = '';
+            
+            if ((localStorage.getItem('sms') != null) && (bFirstTime)) {            
+                document.getElementById('sms-list').innerHTML = localStorage.getItem('sms');
+                console.log('Readed from LocalStorage.');
+                var smsDiv = document.getElementById('sms-list');
+                smsDiv.scrollTop = smsDiv.scrollHeight; 
+            }
+            console.log('Reading from Device.');
+            fetch('get?lastMsg=' + lastMsgReaded + '&fistTime=' + (bFirstTime?1:0), {mode: 'no-cors'})
+                .then(response => response.json())
+                .then(json => {
+                    var msgs = "";
+                    if (json.data.length > 0) {
+                        console.log('Messages Readed. JSON Data on Page.');                    
+                        for(i = 0; i < json.data.length; i++) {
+                            msgs += '<div id="row"><div id="unit">' +
+                            json.data[i]['txid'] + '</div><div id="sms">'
+                            + json.data[i]['message'] + '</div></div>';
+                            lastMsgReaded = json.data[i]['pqid'];
+
+                            aSMS.push(json.data[i]['message']);
+
+                            ++smsCtr;
+                            sessionStorage.setItem('smsCtr', smsCtr);
+                        }
+                        sessionStorage.setItem('lastMsgReaded', lastMsgReaded);
+
+                        var newMsgs = '';
+                        if (localStorage.getItem('sms') === null)
+                            newMsgs = msgs;
+                        else
+                            newMsgs = localStorage.getItem('sms') + msgs;
+                        console.log('Message Structure: ');
+                        console.log(newMsgs);
+
+                        localStorage.setItem('sms', newMsgs);
+                                            
+                        document.getElementById('sms-list').innerHTML += msgs;
+
+                        bFirstTime = false;
+
+                        var smsDiv = document.getElementById('sms-list');
+                        smsDiv.scrollTop = ChatDiv.scrollHeight;                         
+
+                        console.log("SMS Count: ", smsCtr);
+                        document.getElementById('smsCtr').innerText = smsCtr;
+                    }
+                })
+                .catch(function(error) {  
+                    console.log('Request failed', error);
+                }
+                
+            );
+            if (aSMS.length > 0) {
+                pushSMSs();
+            }
+        }  
+       
+    </script>
+</body>
+</html>
+<!-- BENYWHY -->
