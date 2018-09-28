@@ -116,17 +116,21 @@ Well-conceived and effectively delivered emergency messages can help ensure publ
 ![Beacon On](/Platform/images/beacon-active.png)
 
 ## CALL FOR CODE + CONTACT
-We believe that everyone has creative ideas. We, in response to **Call for Code**, develop the **Contact** capabilities around the powerful tools of **IBM Cloud** to demonstrate that it is a powerful platform that can grow.
+We believe that everyone has creative ideas. We, in response to [Call for Code], develop the **Contact** capabilities around the powerful tools of **IBM Cloud** to demonstrate that it is a powerful platform that can grow.
 
 ![Contac Api Architecture](/API/images/architecture.png)
 
 - [Contact API]
 - [Contact API - Github]
 
-The Contact API is **designed to help _you_ understand what your users are saying.** The API receives messages and analyzes them for sentiment and emotional tone. We store all the analysis data in a database and visualize it through charts, graphs and maps to help you make appropriate and informed decisions. [Click here][contact-home] to see it up and running.
+The Contact API is **designed to help _you_ understand what your users are saying.** The API receives messages and analyzes them for sentiment and emotional tone. We store all the analysis data in a database and visualize it through charts, graphs and maps to help you make appropriate and informed decisions. 
+
+Visit the [Contact API] to see it up and running.
 
 That is a reason why we provide a complete *Open Communication Platform* that allows others to control the hardware and the data directly; the people can create custom interfaces and even send the data to other platforms.
 - [Platform Code on Github]
+
+[Call for Code]: (http://callforcode.org) "Call for Code"
 
 [inside]: https://github.com/jdastas/contact-platform/Platform/images/unit-inside.jpg "Unit Inside"
 [setup]: https://github.com/jdastas/contact-platform/Platform/images/setup.png "Contact Setup Screen"
