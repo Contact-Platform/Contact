@@ -45,7 +45,7 @@ Well-conceived and effectively delivered emergency messages can help ensure publ
 
 ### Hardware Flexibility
 - It is *Portable*, it's measure only 3.1 inches (8cm) x 2 inches (5cm). But we know that it can be smaller.
-![Unit](/Platform/images/unit-cell.png)
+![Unit](/Platform/images/units-cell.png)
 - It uses *rechargeable batteries* (3.7v 3.6aH, 18650) that can extend its use up to *30 continuous hours*. It *can be recharged and used with any usb micro "b" power source*, such as power banks for cell phones, small solar panels or the Eton Red Cross Charger.
 
 
