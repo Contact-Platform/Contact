@@ -29,10 +29,9 @@ Well-conceived and effectively delivered emergency messages can help ensure publ
 ### Communication Reach
 - It is possible to reach *up to 8 miles* away in a communication. Within cities with buildings or structures allows a communication of up to two miles, even within structures. But it is possible to double or triple the distance when using the units with a simple MESH.
 ![Main Screen](/Platform/images/contact-reach.png)
-![Main Screen](/Platform/images/simple-mesh.png)
 ![Selecting Locations to communicate](/Platform/images/msg-units-selection.png)
 
-- Is an alternative way of *taking communications trough hard places*. In most emergency incidents, mainly in natural disasters, geography or lack of access do not allow communication.
+- Is an alternative way of *taking communications trough hard places*. In most emergency incidents, mainly in natural disasters, geography or lack of access do not allow communication (forwarding the messages).
 ![Main Screen](/Platform/images/simple-mesh.png)
 
 ### Ease of Use
