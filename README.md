@@ -14,7 +14,7 @@ Well-conceived and effectively delivered emergency messages can help ensure publ
 
 > Delivering effective emergency communications is an essential part of emergency management. We have learned through the experience of Hurricane Maria first that the people around you respond more quickly than the government. Second, although government assistance is available, coordination between people and agencies is needed, and communication is necessary for this.
 
-## Where ?
+## Contact as a Project 
 ![Solution Roadmap](/Platform/images/solution-roadmap.png)
 *Solution Roadmap*
 
