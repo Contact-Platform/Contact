@@ -16,11 +16,11 @@ Well-conceived and effectively delivered emergency messages can help ensure publ
 
 ## How it's Work?
 - Contact combines the use of an IoT device that includes a LoRa transmitter and an ESP32 microcontroller to provide communication access up to eight miles away.
-[imagen de distancia]
-[enlace a fotos]
+![Contact's Reach](/unit/images/contact-reach.png)
+
 - It's the same as using the Internet in a Hotspot. It is not necessary to download additional applications, you only need a device with WiFi and a Web Browser.
 ![Main Screen](/unit/images/group-msg-00.png)
-![Selecting Locations to communicate](/unit/images/group-msg-01.png)
+![Selecting Locations to communicate](/unit/images/sending-msg.png)
 
 - Contact code allows each unit to extend the distance by replicating any message up to two more units, creating a simple MESH by using a lifetime for each data packet that has been sent.
 ![Main Screen](/unit/images/simple-mesh.png)
@@ -28,7 +28,9 @@ Well-conceived and effectively delivered emergency messages can help ensure publ
 ## Features
 ### Communication Reach
 - It is possible to reach *up to 8 miles* away in a communication. Within cities with buildings or structures allows a communication of up to two miles, even within structures. But it is possible to double or triple the distance when using the units with a simple MESH.
-![Selecting Locations to communicate](/unit/images/group-msg-01.png)
+![Main Screen](/unit/images/contact-reach.png)
+![Main Screen](/unit/images/simple-mesh.png)
+![Selecting Locations to communicate](/unit/images/msg-units-selection.png)
 
 - Is an alternative way of *taking communications trough hard places*. In most emergency incidents, mainly in natural disasters, geography or lack of access do not allow communication.
 ![Main Screen](/unit/images/simple-mesh.png)
