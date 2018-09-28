@@ -36,8 +36,8 @@ Well-conceived and effectively delivered emergency messages can help ensure publ
 
 ### Ease of Use
 - To use contact it is not necessary to download any application. The unit works just like a hostpot, you use a WiFi connection and then you use the tools through any web browser.
-![Main Screen](/Platform/images/group-msg-00.png)
-![Receiving Messages](/Platform/images/group-msg-02.png)
+![Main Screen](/Platform/images/main-interface.png)
+![Receiving Messages](/Platform/images/main-interface-use.png)
 
 ### Ease of Access
 - The price is very affordable, the cost is $11.00 to produce a unit. But it can be less by producing more units in a bigger scale.
@@ -45,7 +45,7 @@ Well-conceived and effectively delivered emergency messages can help ensure publ
 
 ### Hardware Flexibility
 - It is *Portable*, it's measure only 3.1 inches (8cm) x 2 inches (5cm). But we know that it can be smaller.
-![Unit](/Platform/images/contact-unit.jpg)
+![Unit](/Platform/images/unit-cell.png)
 - It uses *rechargeable batteries* (3.7v 3.6aH, 18650) that can extend its use up to *30 continuous hours*. It *can be recharged and used with any usb micro "b" power source*, such as power banks for cell phones, small solar panels or the Eton Red Cross Charger.
 
 
