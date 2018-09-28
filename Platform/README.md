@@ -1,32 +1,19 @@
-# CONTACT-UNIT
+# Contact's Unit
 
-## What is CONTACT?
-An open platform that brings together software and hardware to allow everyone to communicate up to eight mile radius.
+Contact combines the use of an IoT device that includes a LoRa transmitter and an ESP32 microcontroller to provide communication access up to eight miles away.
 
-## Why we create CONTACT?
-During and after an emergency, communication with communities is critical.
+To be able to use the capacity of this device to the maximum, an elaborated coding is necessary.
 
-Helping people at all levels to communicate empowers them to recognize important issues and find common grounds for action, and builds a sense of identity and participation in order to implement decisions.
+This is why the integration of multiple programming languages ​​such as C++, HTML, Javascript and CSS is necessary. In addition to the use of tools that facilitate the integration of all these.
 
-Well-conceived and effectively delivered emergency messages can help ensure public safety, protect property, facilitate response efforts, elicit cooperation, instill public confidence, and help families reunite.
+The Contact code is divided into two layers. 
+- The first layer is used to give instructions to the IoT device and is developed in C++. 
+- The second layer allows all the communication functions between the devices and the interaction with the device by the user. This second layer is encoded in HTML, Javascript and CSS.
 
-> Delivering effective emergency communications is an essential part of emergency management. We have learned through the experience of Hurricane Maria first that the people around you respond more quickly than the government. Second, although government assistance is available, coordination between people and agencies is needed, and communication is necessary for this.
-[imagen unidades contact]
+## Contact's Code
+### Communication and Instruction Process
+The device has two hardware components. A LoRa module that allows the transmission of data over long distances and an ESP32 microcontroller that allows the process of instructions, create a web server, accept Wi-Fi communication and other functions such as adding a GPS module.
 
-
-## How it's Work?
-- Contact combines the use of an IoT device that includes a LoRa transmitter and an ESP32 microcontroller to provide communication access up to eight miles away.
-[imagen de distancia]
-[enlace a fotos]
-- It's the same as using the Internet in a Hotspot. It is not necessary to download additional applications, you only need a device with WiFi and a Web Browser.
-[una imagen]
-[enlace a pantallas]
-- Contact code allows each unit to extend the distance by replicating any message up to two more units, creating a simple MESH by using a lifetime for each data packet that has been sent.
-[ejemplo del código]
-
-
-## Features
-### Communication Reach
 - It is possible to reach *up to 8 miles* away in a communication. Within cities with buildings or structures allows a communication of up to two miles, even within structures. But it is possible to double or triple the distance when using the units with a simple MESH.
 [imagen lista online communities]
 - Is an alternative way of *taking communications trough hard places*. In most emergency incidents, mainly in natural disasters, geography or lack of access do not allow communication.

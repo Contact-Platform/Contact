@@ -13,8 +13,10 @@ Helping people at all levels to communicate empowers them to recognize important
 Well-conceived and effectively delivered emergency messages can help ensure public safety, protect property, facilitate response efforts, elicit cooperation, instill public confidence, and help families reunite.
 
 > Delivering effective emergency communications is an essential part of emergency management. We have learned through the experience of Hurricane Maria first that the people around you respond more quickly than the government. Second, although government assistance is available, coordination between people and agencies is needed, and communication is necessary for this.
-[imagen unidades contact]
 
+## Where ?
+![Solution Roadmap](/Platform/images/solution-roadmap.png)
+*Solution Roadmap*
 
 ## How does it Work?
 - Contact combines the use of an IoT device that includes a LoRa transmitter and an ESP32 microcontroller to provide communication access up to eight miles away.
@@ -71,7 +73,7 @@ Well-conceived and effectively delivered emergency messages can help ensure publ
 ```javascript
   function sendData() {
             var jsonData = jsonForm(document.getElementById('form'));
-            SendToServer(jsonData, 'GOVERNMENT'); /* Your Contact Unit */
+            SendToServer(jsonData, 'GATEWAY'); /* Your Receiving Contact Unit */
             document.getElementById('datos').innerHTML += 
                 '<pre>'  + jsonData + '</pre><br>';            
         }
@@ -120,7 +122,7 @@ We believe that everyone has creative ideas. We, in response to [Call for Code],
 
 ![Contac Api Architecture](/API/images/architecture.png)
 
-- [Contact API]
+- [Contact API - Demo]
 - [Contact API - Github]
 
 ![Contact Api Running](/Platform/images/contact-api-01.png)
@@ -138,7 +140,7 @@ That is a reason why we provide a complete *Open Communication Platform* that al
 [setup]: https://github.com/jdastas/contact-platform/Platform/images/setup.png "Contact Setup Screen"
 [gateway]: https://github.com/jdastas/contact-platform/Platform/images/gateway.png "Internet Gateway"
 [Customized Data Form]: https://github.com/jdastas/contact-platform/Platform/interfaces/form-data.html "Data Form Demo"
-[Contact API]: https://contact-app.mybluemix.net/ "Contact API"
+[Contact API - Demo]: https://contact-app.mybluemix.net/ "Contact API"
 [Contact API - Github]: https://github.com/javierdastas/Contact/tree/master/API "Contact API Code"
 
 [Platform Code on Github]: https://github.com/Contact-Platform/Contact/tree/master/Platform "Contact Unit Code"
