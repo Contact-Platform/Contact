@@ -48,7 +48,6 @@ Well-conceived and effectively delivered emergency messages can help ensure publ
 
 ### Ease of Access
 - The price is very affordable, the cost is $11.00 to produce a unit. But it can be less by producing more units in a bigger scale.
-![Unit Inside](/Platform/images/unit-inside.jpg)
 
 ### Hardware Flexibility
 - It is *Portable*, it's measure only 3.1 inches (8cm) x 2 inches (5cm). But we know that it can be smaller.
