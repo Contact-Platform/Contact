@@ -118,7 +118,9 @@ In emergency situations it is important to know the needs and emotions of all in
 
 ![Gateway Confirmation Screen](/Platform/images/gateway.png)
 
-- The Contact API is **designed to help _you_ understand what your users are saying.** The API receives messages and analyzes them for sentiment and emotional tone by using the IBM Cloud Tools. We store all the analysis data in a database and visualize it through charts, graphs and maps to help you make appropriate and informed decisions.
+- The [Contact API] is **designed to help _you_ understand what your users are saying.** The API receives messages and analyzes them for sentiment and emotional tone by using the IBM Cloud Tools. We store all the analysis data in a database and visualize it through charts, graphs and maps to help you make appropriate and informed decisions. 
+
+![Contact Api Running](/Platform/images/contact-api-01.png)
 
 - *Beacon and Geolocation Integration*. It allowing it to be used as a Beacon to locate people in other rescue situations. By using a powerful open-technology microcontroller (ESP32) you can extend the capacity of the device while maintaining low cost and performance. 
 
