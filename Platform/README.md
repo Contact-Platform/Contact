@@ -180,6 +180,7 @@ The code was written in HTML, Javascript and CSS.
 *Main Options and Interaction*
 
 ![Sending Messages](/Platform/images/main-interface-use.png)
+
 *Sending a Message to selected Online Locations*
 
 [Click here to view the Code](https://github.com/Contact-Platform/Contact/blob/master/Platform/interfaces/main/main-screen.html "Main Screen Code")
@@ -278,7 +279,7 @@ The code was written in HTML, Javascript and CSS.
 
 [Click here to view the Code](https://github.com/Contact-Platform/Contact/blob/master/Platform/interfaces/gateway/pushsms.html "Setup Screen Code")
 
-### Data Form - Custome Interface
+### Data Form - Customized Interface
 
 This code is an example of the capabilities of the Contact Platform. The example demonstrates how an external interface can be developed to send data through the Contact Platform.
 
