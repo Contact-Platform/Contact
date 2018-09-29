@@ -12,6 +12,9 @@ Helping people at all levels to communicate empowers them to recognize important
 
 Well-conceived and effectively delivered emergency messages can help ensure public safety, protect property, facilitate response efforts, elicit cooperation, instill public confidence, and help families reunite.
 
+<a href="https://youtu.be/MLwHU5oP0mU" target="_blank"><img src="Parents/images/contact-logo.png" 
+alt="Contact Video" width="240" height="180" border="10" /></a>
+
 > Delivering effective emergency communications is an essential part of emergency management. We have learned through the experience of Hurricane Maria first that the people around you respond more quickly than the government. Second, although government assistance is available, coordination between people and agencies is needed, and communication is necessary for this.
 
 ## Contact as a Project 
