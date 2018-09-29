@@ -20,6 +20,7 @@ Well-conceived and effectively delivered emergency messages can help ensure publ
 - Contact combines the use of an IoT device that includes a LoRa transmitter and an ESP32 microcontroller to provide communication access up to eight miles away.
 
 ![Contact Hardware](/Platform/images/hardware.png)
+*Inside a Contact Box*
 
 - It's the same as using the Internet in a Hotspot. It is not necessary to download additional applications, you only need a device with WiFi and a Web Browser.
 

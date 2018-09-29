@@ -39,6 +39,8 @@ In order to receive and send messages, the unit uses the LoRa module and the WiF
 
 #### [Hardware Code]
 
+The code is developed in C ++ using a structure based on Arduino microcontrollers. When using a programming structure based on Arduino we obtain a device that from its bases is an Open Platform.
+
 ```cpp
 
 int nTTL_MAX = 2;                 // Time-To-Live Package (MESH)
@@ -166,6 +168,8 @@ Another very important option is the ability to forward messages to other units.
     }
          
 ```
+[Click here to view the complete Code](https://github.com/Contact-Platform/Contact/Platform/device/device.ino "Unit Code")
+
 ## Contact's Front-end - Embedded Application Code
 
 ### Main Application Interface
@@ -183,7 +187,7 @@ The code was written in HTML, Javascript and CSS.
 
 *Sending a Message to selected Online Locations*
 
-[Click here to view the Code](https://github.com/Contact-Platform/Contact/blob/master/Platform/interfaces/main/main-screen.html "Main Screen Code")
+[Click here to view the Code](https://github.com/Contact-Platform/Contact/Platform/interfaces/main/main-screen.html "Main Screen Code")
 
 ### Setup Interface
 
