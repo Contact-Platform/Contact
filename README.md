@@ -134,7 +134,7 @@ We believe that everyone has creative ideas. We, in response to [Call for Code],
 
 The Contact API is **designed to help _you_ understand what your users are saying.** The API receives messages and analyzes them for sentiment and emotional tone. We store all the analysis data in a database and visualize it through charts, graphs and maps to help you make appropriate and informed decisions. 
 
-Visit the [Contact API - Demo] to see it up and running.
+Visit the [Contact API] to see it up and running.
 
 That is a reason why we provide a complete *Open Communication Platform* that allows others to control the hardware and the data directly; the people can create custom interfaces and even send the data to other platforms.
 - [Platform Code on Github]
@@ -145,7 +145,11 @@ That is a reason why we provide a complete *Open Communication Platform* that al
 [setup]: https://github.com/jdastas/contact-platform/Platform/images/setup.png "Contact Setup Screen"
 [gateway]: https://github.com/jdastas/contact-platform/Platform/images/gateway.png "Internet Gateway"
 [Customized Data Form]: https://github.com/jdastas/contact-platform/Platform/interfaces/data-form.html "Data Form Demo"
+
+[Contact API]: https://contact-app.mybluemix.net/ "Contact API"
+
 [Contact API - Demo]: https://contact-app.mybluemix.net/ "Contact API"
 [Contact API - Github]: https://github.com/javierdastas/Contact/tree/master/API "Contact API Code"
+
 
 [Platform Code on Github]: https://github.com/Contact-Platform/Contact/tree/master/Platform "Contact Unit Code"
