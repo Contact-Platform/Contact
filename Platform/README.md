@@ -174,7 +174,8 @@ Another very important option is the ability to forward messages to other units.
     }
          
 ```
-[Click here to view the complete Code](https://github.com/Contact-Platform/Contact/Platform/device/device.ino "Unit Code")
+[Click here to view the complete Code](
+https://github.com/Contact-Platform/Contact/blob/master/Platform/device/device.ino "Unit Code")
 
 ## Contact's Front-end - Embedded Application Code
 
@@ -193,7 +194,7 @@ The code was written in HTML, Javascript and CSS.
 
 *Sending a Message to selected Online Locations*
 
-[Click here to view the Code](https://github.com/Contact-Platform/Contact/Platform/interfaces/main/main-screen.html "Main Screen Code")
+[Click here to view the Code](https://github.com/Contact-Platform/Contact/blob/master/Platform/interfaces/main/main-screen.html "Main Screen Code")
 
 ### Setup Interface
 
@@ -277,7 +278,7 @@ The second part of the data allows you to specify that the unit connect to anoth
 
 The code was written in HTML, Javascript and CSS.
 
-[Click here to view the Code](https://github.com/Contact-Platform/Contact/blob/master/Platform/interfaces/setup/unit-setting.html "Setup Screen Code")
+[Click here to view the Code](https://github.com/Contact-Platform/Contact/blob/master/Platform/setup/unit-setting.html "Setup Screen Code")
 
 ### Gateway Interface
 

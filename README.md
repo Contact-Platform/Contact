@@ -3,7 +3,7 @@
 ## What is CONTACT?
 An open platform that brings together software and hardware to allow everyone to communicate up to eight mile radius.
 
-![Contact Concept](/Platform/images/concept.png)
+![How does Contact work](/Platform/images/contact-how-work-no-title.png)
 
 ## Why did we create CONTACT?
 During and after an emergency the communication communities is critical. Helping people at all levels to communicate empowers them to recognize important issues and find common grounds for action, and builds a sense of identity and participation in order to implement decisions.
@@ -19,7 +19,7 @@ Well-conceived and effectively delivered emergency messages can help ensure publ
 ## How does it Work?
 - Contact combines the use of an IoT device that includes a LoRa transmitter and an ESP32 microcontroller to provide communication access up to eight miles away.
 
-![Contact Detail Architecture](/Platform/images/contact-how-work.png)
+![Contact Detail Architecture](/Platform/images/contact-detail-architecture.png)
 
 - It's the same as using the Internet in a Hotspot. It is not necessary to download additional applications, you only need a device with WiFi and a Web Browser.
 
@@ -134,7 +134,7 @@ We believe that everyone has creative ideas. We, in response to [Call for Code],
 
 The Contact API is **designed to help _you_ understand what your users are saying.** The API receives messages and analyzes them for sentiment and emotional tone. We store all the analysis data in a database and visualize it through charts, graphs and maps to help you make appropriate and informed decisions. 
 
-Visit the [Contact API] to see it up and running.
+Visit the [Contact API - Demo] to see it up and running.
 
 That is a reason why we provide a complete *Open Communication Platform* that allows others to control the hardware and the data directly; the people can create custom interfaces and even send the data to other platforms.
 - [Platform Code on Github]
