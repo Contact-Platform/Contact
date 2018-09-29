@@ -2,8 +2,9 @@
 
 # Contact's Node.js API
 
-[contact-home]: https://contact-app.mybluemix.net/
-In this project we demonstrate our Node.js API, based on the Express framework, who is **designed to help _you_ understand what your users are saying.** The API receives messages and analyzes them for sentiment and emotional tone. We store all the analysis data in a database and visualize it through charts, graphs and maps to help you make appropriate and informed decisions. [Click here][contact-home] to see it up and running.  
+[contact-home]: https://github.com/Contact-Platform/Contact/tree/master/Platform
+[contact-demo]: https://contact-app.mybluemix.net/
+In this project we demonstrate our Node.js API, based on the Express framework, who is **designed to help _you_ understand what your users are saying.** The API receives messages and analyzes them for sentiment and emotional tone. We store all the analysis data in a database and visualize it through charts, graphs and maps to help you make appropriate and informed decisions. [Click here][contact-demo] to see it up and running.  
 
 **Note:** This is meant to be an **Add-On** to any existing application, in our case we use [Contact][contact-home]. Once you do the steps you're expected to develop your own external application to feed this API. Keep that in mind, you're supposed to **bring your own data**. That said we do give you a very basic way of data entry.
 
@@ -35,13 +36,13 @@ In this project we demonstrate our Node.js API, based on the Express framework, 
 ## Steps
 
 **Quick links**  
-[Step 1. Clone the repository](###-1.-Clone-the-repository)  
-[Step 2. cd into this project's root directory](###-2.-cd-into-this-project's-root-directory)  
-[Step 3. Make sure Node.js is installed in your computer](###-3.-Make-sure-is-installed-in-your-computer)  
-[Step 4. Install dependencies](###-4.-Install-dependencies)  
-[Step 5. Create Watson services with IBM Cloud](###-5.-Create-Watson-services-with-IBM-Cloud)  
-[Step 6. Configure your Credentials](###-6.-Configure-your-Credentials)  
-[Step 7. Run your API locally](###-7.-Run-your-API-locally)
+[Step 1. Clone the repository](#1.-Clone-the-repository)  
+[Step 2. cd into this project's root directory](#2.-cd-into-this-project's-root-directory)  
+[Step 3. Make sure Node.js is installed in your computer](#3.-Make-sure-is-installed-in-your-computer)  
+[Step 4. Install dependencies](#4.-Install-dependencies)  
+[Step 5. Create Watson services with IBM Cloud](#5.-Create-Watson-services-with-IBM-Cloud)  
+[Step 6. Configure your Credentials](#6.-Configure-your-Credentials)  
+[Step 7. Run your API locally](#7.-Run-your-API-locally)
 
 ### 1. Clone the repository
 
@@ -362,7 +363,7 @@ This is the star of the show, **why?** because when you send data to this route 
     ```
 
 **Note:** We are using this to analyze text but if you go to
-`app.js` you can change the parameters so that you can send text, HTML or even URLs to public webpages, like news articles, to be analyzed. Check out the API Reference for [NLU](https://www.ibm.com/watson/developercloud/natural-language-understanding/api/v1/?node#versioning) and [TA](https://www.ibm.com/watson/developercloud/tone-analyzer/api/v3/node.html?node#versioning) to learn more.
+`app.js` you can change the parameters so that you can send text, HTML or even URLs to public webpages, like news articles, to be analyzed. Check out the API Reference for [NLU](https://www.ibm.com/watson/developercloud/natural-language-understanding/api/v1/?node#methods) and [TA](https://www.ibm.com/watson/developercloud/tone-analyzer/api/v3/node.html?node#methods-api) to learn more.
 
 ##### ___/api/add/location___
 
@@ -453,7 +454,7 @@ And that should be it you can access your application by going to your App's Ove
 
 ## Demo
 
-As mentioned at the top we have an example of this up and running [Click here][contact-home] to see it.
+As mentioned at the top we have an example of this up and running [Click here][contact-demo] to see it.
 
 ### Images
 
@@ -467,7 +468,6 @@ Here are some screenshots of what we did with ours so feel free to make this you
 
 [graphs]:  ./images/graphs.png
 ![alt text][graphs]
-
 
 ## Technologies
 
