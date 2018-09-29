@@ -140,7 +140,7 @@ That is a reason why we provide a complete *Open Communication Platform* that al
 [inside]: https://github.com/jdastas/contact-platform/Platform/images/unit-inside.jpg "Unit Inside"
 [setup]: https://github.com/jdastas/contact-platform/Platform/images/setup.png "Contact Setup Screen"
 [gateway]: https://github.com/jdastas/contact-platform/Platform/images/gateway.png "Internet Gateway"
-[Customized Data Form]: https://github.com/jdastas/contact-platform/Platform/interfaces/form-data.html "Data Form Demo"
+[Customized Data Form]: https://github.com/jdastas/contact-platform/Platform/interfaces/data-form.html "Data Form Demo"
 [Contact API - Demo]: https://contact-app.mybluemix.net/ "Contact API"
 [Contact API - Github]: https://github.com/javierdastas/Contact/tree/master/API "Contact API Code"
 
