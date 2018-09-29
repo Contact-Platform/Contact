@@ -12,7 +12,7 @@ Well-conceived and effectively delivered emergency messages can help ensure publ
 
 > Delivering effective emergency communications is an essential part of emergency management. We have learned through the experience of Hurricane Maria first that the people around you respond more quickly than the government. Second, although government assistance is available, coordination between people and agencies is needed, and communication is necessary for this.
 
-In emergency situations it is important to know the needs and emotions of all involved, but process all the field data its practically imposible.  For that reason, our solution, it is also designed to help you understand what your users are saying by usign an Artificially Inteligence system. Our solution can receives messages and analyzes them for sentiment,  emotional tone and identify the keywords in the conversations. Storing all the data in a database and visualize it through charts, graphs and maps can help you make appropriate and informed decisions on emergency situations and logistics understanding what people need and their emotion. [Contact + IBM]
+In emergency situations it is important to know the needs and emotions of all involved, but process all the field data its practically imposible.  For that reason, our solution, it is also designed to help you understand what your users are saying by usign an Artificially Inteligence system. Our solution can receives messages and analyzes them for sentiment,  emotional tone and identify the keywords in the conversations. Storing all the data in a database and visualize it through charts, graphs and maps can help you make appropriate and informed decisions on emergency situations and logistics understanding what people needs and their emotions. [Contact + IBM]
 
 ## Contact as a Project 
 ![Solution Roadmap](/Platform/images/solution-roadmap.png)
@@ -117,6 +117,8 @@ In emergency situations it is important to know the needs and emotions of all in
 - It **can be used as a Network or Internet Gateway** to send all received messages to another network, the Internet,  [Contact API] or another platform such as Twilio.
 
 ![Gateway Confirmation Screen](/Platform/images/gateway.png)
+
+- The Contact API is **designed to help _you_ understand what your users are saying.** The API receives messages and analyzes them for sentiment and emotional tone by using the IBM Cloud Tools. We store all the analysis data in a database and visualize it through charts, graphs and maps to help you make appropriate and informed decisions.
 
 - *Beacon and Geolocation Integration*. It allowing it to be used as a Beacon to locate people in other rescue situations. By using a powerful open-technology microcontroller (ESP32) you can extend the capacity of the device while maintaining low cost and performance. 
 
