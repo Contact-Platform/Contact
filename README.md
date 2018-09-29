@@ -26,7 +26,7 @@ Well-conceived and effectively delivered emergency messages can help ensure publ
 ![Selecting Locations to communicate](/Platform/images/sending-msg.png)
 
 <a href="https://youtu.be/MLwHU5oP0mU" target="_blank">
-<p>Click here to see demo video.</p></a>
+<p>Click here to see a demo video.</p></a>
 
 - Contact code allows each unit to extend the distance by replicating any message up to two more units, creating a simple MESH by using a lifetime for each data packet that has been sent.
 
@@ -39,6 +39,7 @@ Well-conceived and effectively delivered emergency messages can help ensure publ
 ![Contact Reach](/Platform/images/contact-reach.png)
 
 ![Selecting Locations to communicate](/Platform/images/msg-units-selection.png)
+*Online Locations Units*
 
 - Is an alternative way of *taking communications trough hard places*. In most emergency incidents, mainly in natural disasters, geography or lack of access do not allow communication (forwarding the messages).
 
@@ -46,6 +47,7 @@ Well-conceived and effectively delivered emergency messages can help ensure publ
 - To use contact it is not necessary to download any application. The unit works just like a hostpot, you use a WiFi connection and then you use the tools through any web browser.
 
 ![Main Screen](/Platform/images/main-interface.png)
+*All interactions are through Web interfaces.*
 
 ![Sending Messages](/Platform/images/main-interface-use.png)
 
