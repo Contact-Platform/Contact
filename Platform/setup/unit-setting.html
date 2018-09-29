@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Device Setup</title>
+    <style>
+        html, body, #content { 
+            font-family: Helvetica, Geneva, Verdana, sans-serif;
+            background: rgb(247, 213, 194);
+            height: 100%; width: 100%; margin: 0; padding:0;
+            overflow: hidden; border-top: 1px solid orange;}
+        #content {overflow-y: auto;}
+        #form {    
+            margin: auto;   
+            border: 1px solid lightgray;
+            border-radius: 3px;
+            background: white;
+            width: 90%;
+            overflow-y: auto;
+            box-shadow: 0px 0px 6px grey;
+        }
+        header { border-bottom: 1px solid lightgray;
+        padding: 4px 8px; margin-bottom: 10px; background: rgb(37, 40, 43);}
+        section { border-top: 1px solid lightgray; 
+            border-bottom: 1px solid lightgray;
+            margin: 8px 0px; }
+        aside { margin: 0px 22px 8px;}
+        footer {
+            text-align: right;
+            padding: 5px 28px 12px 8px;
+        }
+        h1 {font-weight: bolder; font-size: x-large; margin: 4px; color: white;}
+        h3 {font-weight: thin; font-size: medium; margin: 6px; color: darkgrey;}
+        label {display: block; margin: 10px 14px 4px;
+            font-size: small; color: grey;}
+        input[type='text'], input[type='password'], textarea {
+            border: 1px solid lightgray; box-shadow: none; outline: none;
+            padding: 4px 8px; margin: 4px 16px;
+            border-radius: 3px;
+            font-size: medium; color: black;
+        }
+        input[type='button'] {
+            font-size: medium;
+            padding: 8px; 
+            border: 0px;
+            border-radius: 3px;
+            color: white;
+            box-shadow: 0px 0px 4px gray;
+        }
+        #save {
+            background: #4284f4;
+        }
+        #save:active, #save:hover {
+            background: #0d47a1;
+            box-shadow: none;
+        }        
+        #restart {
+            background:  rgb(255, 81, 0); 
+        }    
+        #restart:active, #restart:hover {
+            background: rgb(255, 0, 0);
+        }             
+        p { font-size: small; margin: 14px 0px 8px; 
+            padding: 0px 18px 8px 16px;}
+        #checkbox { color: blue; margin-bottom: 12px; font-size: medium;}
+        .freq {margin-bottom: 0px;}
+        .unitFreq { display: inline-block; }
+        .hide {
+          display: none;
+        }          
+        @media (max-width: 812px) {
+            #form { width: 98%; overflow-x: hidden; margin-top: 0;}
+            h3 { margin: 4px 6px;}
+            aside {margin: 0px;}
+            label { margin: 6px 14px 2px; }
+            textarea { width: 85%;}
+            #checkbox { font-size: small; }            
+            footer { margin-right: 0px; padding: 2px 12px 10px 0px;}
+        }          
+    </style>
+</head>
+<body>
+    <div id='content'>
+        <header>
+            <h1>CONTACT</h1>
+            <h3>DEVICE SETTINGS</h3>
+        </header>
+        <div id='form'>  
+            <form>          
+                <label>Device Name (Home, Shelter, other):</label>
+                <input type='text' maxlength='12' name='unitName'  id='unitName' placeholder='Device Name' size='20' value=''>
+                <Label>Location (if not mobile):</Label>
+                <input type='text' maxlength='30' name='unitDesc' id='unitDesc' placeholder='Location' size='30' value=''>
+                <Label class='freq'>Unit Frequency:</Label>
+                <Label class='unitFreq'>
+                    <input type='radio' name='unitFreq' id='unitFreq1' value='1'>USA/Asia/Australia</Label>
+                <Label class='unitFreq'>
+                    <input type='radio' name='unitFreq' id='unitFreq2' value='2'>Europe/India</Label>
+                <section>
+                    <label id='checkbox'>
+                        <input type='checkbox' value='1' name='isGateway' id='isGateway' onchange='chkSelected();' name='isGateway'>&nbsp;Check to Use this Device as Gateway
+                    </label>
+                    <aside id='aside' class='hide'>
+                        <p>Please complete the following information to connect the CONTACT Device as Internet Gateway.</p>
+                        
+                        <label>WiFi Connection to Network:</label>
+                        <input type='text' maxlength='20' name='ssid' id='ssid' placeholder='WiFi Network' value='' >
+                        <label>WiFi Password (if needed): </label>
+                        <input type='password' maxlength='20' name='ssidPwd' id='ssidPwd' placeholder='WiFi Password' value='' >
+
+                        <label>Server URL to Post the Messages:</label>
+                        <textarea name='smsServer' id='smsServer' row='3' cols='50' maxlength='200' placeholder='Rest URL for Messages' ></textarea>
+                        <label>Server URL to Post the Data:</label>
+                        <textarea name='dataServer' id='dataServer' row='3' cols='50' maxlength='200' placeholder='Rest URL for Data' ></textarea>
+                    </aside>                                   
+                </section>
+                <footer>
+                    <input type='button' id='save' onclick='saveVars();' value='Save'>&nbsp;
+                    <input type='button' id='restart' onclick='restartDev();' value='Restart Unit'>
+                </footer>  
+            </form>            
+        </div>
+   
+    </div>    
+
+    <script>        
+        getUnitSetup();        
+
+        function chkSelected() {
+            var lbl = document.getElementById('checkbox');
+            var chk = document.getElementById('isGateway');
+
+            document.getElementById('aside').classList.toggle('hide');        
+
+            if (chk.checked == true) {
+                lbl.style.fontWeight = 'bold';
+            }
+            else {
+                lbl.style.fontWeight = 'normal';
+            }            
+        }
+
+        function getUnitSetup() {
+            console.log('Getting Unit Setup Values.');
+            fetch('getsetup?id=1234', {mode: 'no-cors'})
+                .then(response =>response.json())
+                .then(json => {                
+                    console.log('JSON Len: ', json.data);
+                    console.log('JSON: ', json.data[0]);
+                    if (json.data.length > 0) {
+                        document.getElementById('unitName').value = json.data[0]['unitname'];
+                        document.getElementById('unitDesc').value = json.data[0]['unitdesc'];
+
+                        document.getElementById('unitFreq1').checked = 
+                            (json.data[0]['unitfreq'] == '0' ? false : 
+                            (json.data[0]['unitfreq'] == '1' ? true : false));
+                        document.getElementById('unitFreq2').checked = 
+                            (json.data[0]['unitfreq'] == '0' ? false : 
+                            (json.data[0]['unitfreq'] == '2' ? true : false));                         
+
+                        document.getElementById('isGateway').checked = 
+                            (json.data[0]['isgateway'] == '1' ? true : false);
+                        if (json.data[0]['isgateway'] == '1') 
+                            chkSelected();
+
+                        document.getElementById('ssid').value = json.data[0]['ssid'];
+                        document.getElementById('ssidPwd').value = json.data[0]['ssidpwd'];
+
+                        document.getElementById('smsServer').value = json.data[0]['smsserver'];
+                        document.getElementById('dataServer').value = json.data[0]['dataserver'];
+                    }
+                })
+                .catch(function(error) {  
+                    console.log('Request failed', error);
+            });
+        }
+
+        function saveVars() {
+            var dataVars = serialize(document.forms[0]);
+            console.log(dataVars);
+            fetch('putsetup?' + dataVars, {mode: 'no-cors'})
+                .then(response => response.json())
+                .then(json => console.log(json))
+                .catch(function(error) {  
+                    console.log('Request failed', error);
+            });
+            alert('New Settings Saved.');
+        }
+
+        function restartDev() {
+            var opt = confirm('Are you sure?');
+            if (opt == true) {
+                fetch('restart?id=1234', {mode: 'no-cors'})
+                    .then(response => response.json())
+                    .then(json => console.log(json))
+                    .catch(function(error) {  
+                        console.log('Request failed', error);
+                });
+                alert('Unit Restarted...\nConnect again, if necessary!');
+            }
+        }
+
+        function serialize(form) {            
+            var lastClassName = '';
+            var bEvaluated = false;
+
+            if (!form || form.nodeName !== 'FORM') {
+                return;
+            }
+            var i, j, q = [];
+            for (i = form.elements.length - 1; i >= 0; i = i - 1) {
+                var n = form.elements[i].name;
+                var v = form.elements[i].value;
+                var t = form.elements[i].type;
+                if (n === '') {
+                    continue;
+                }
+                switch (form.elements[i].nodeName) {
+                case 'INPUT':
+                    switch (t) {
+                    case 'text':
+                    case 'hidden':
+                    case 'password':
+                        q.push(n + "=" + encodeURIComponent(v));
+                        break;
+                    case 'checkbox':
+                    case 'radio':
+                        var nodeList = document.querySelectorAll('input[name="'+ n + '"]');
+                        if (nodeList.length > 1) 
+                        {
+                            if (n !== lastClassName) {
+                                nodeList.forEach(function(node, i) {
+                                    if (node.checked) {
+                                        q.push(n + "=" + encodeURIComponent(node.value));
+                                        bEvaluated = true;
+                                    }
+                                });
+                                if (!bEvaluated) 
+                                    q.push(n + "=" + encodeURIComponent(0));
+                                
+                                lastClassName = n;
+                            }
+                        }
+                        else 
+                            if (form.elements[i].checked) {
+                                q.push(n + "=" + encodeURIComponent(v));
+                            }	
+                            else
+                                q.push(n + "=" + encodeURIComponent('0'));
+                        break;
+                    }
+                    break;			 
+                case 'TEXTAREA':
+                    q.push(n + "=" + encodeURIComponent(v));
+                    break;
+                }
+            }
+            return q.join("&");
+        }        
+    </script>
+</body>
+</html>
+ <!-- BENYWHY -->

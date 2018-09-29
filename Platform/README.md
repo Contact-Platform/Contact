@@ -21,7 +21,7 @@ The Contact code is divided into two layers.
 All layers work as state of the art watch's parts to get the most powerfull and simple communication device.
 
 <a href="https://youtu.be/MLwHU5oP0mU" target="_blank"><img src="images/contact-logo.png" 
-alt="Contact Video" width="100" height="auto" border="10" />&nbsp;Click here see a video with a demo.</a>
+alt="Contact Video" width="100" height="auto" border="10" /><p>&nbsp;Click here see a video with a demo.</p></a>
 
 ## Contact Architecture
 The main functionality of Contact is the ability to communicate between different devices. Contact uses WiFi communication to receive the data that it wants to transmit and in turn so that the user can request the data. The Contact code allows each unit to work as a Hotspot and Web Server at the same time. Through the Web Server in Contact the user can access different functions, such as a chat for communication between the Contact units, configuration screens for the units and screens that allow reading data sent through the Contact units and sending that data to other networks or the Internet.
@@ -166,14 +166,117 @@ Another very important option is the ability to forward messages to other units.
     }
          
 ```
-## Contact's Front-end - Code
+## Contact's Front-end - Embedded Application Code
 
-### Application Interfaces
+### Main Application Interface
 
-The main 
+The main screen of the web application integrated in the Contact web server allows users to send messages to the other units. The code also asks the unit, at intervals of time, for the information that the unit has received. Another function that allows is to send the messages written by the user. Also, to send messages requesting help, in time intervals. This happens when the beacon option is active. It also sends certain time intervals information related to the unit, this allows the other units to know what units are available to make contact. 
+The code was written in HTML, Javascript and CSS.
 
+![Selecting Locations to communicate](/Platform/images/msg-units-selection.png)
+*Selecting Online Locations to Send Messages*
 
+![Main Screen](/Platform/images/main-interface.png)
+*Main Options and Interaction*
 
+![Sending Messages](/Platform/images/main-interface-use.png)
+*Sending a Message to selected Online Locations*
+
+[Click here to view the Code](https://github.com/Contact-Platform/Contact/blob/master/Platform/interfaces/main/main-screen.html "Main Screen Code")
+
+### Setup Interface
+
+This interface allows the user to specify options related to the unit and functions to connect the unit as a gateway to other platforms or the Internet. All data sent through this interface is recorded in the EEPROM or Flash Memory of the Unit.
+
+```cpp
+
+class FLASHvariables {
+public:
+  char unitName[14];
+  char unitDesc[30];
+
+  uint8_t unitFreq; // Unit Area Frequency
+  // Default is 0, ISM Band will be selected.
+
+  double lat;
+  double lng;
+
+  uint16_t isGateway; // 0 - No; 1 - Yes
+ 
+  char ssid[20];
+  char ssidPwd[20];  
+
+  char smsServer[300];
+  char dataServer[300];  
+
+  char helpMessage[300];
+
+  uint16_t tstVar; // 
+
+  // METHODS
+  void save();
+  void get();
+  void initialize();  
+  
+}  CONTACTvars;
+
+void FLASHvariables::save()
+{
+  EEPROM.put(0, CONTACTvars);
+  EEPROM.commit();
+}
+void FLASHvariables::get() 
+{
+  EEPROM.begin(sizeof(CONTACTvars));
+  EEPROM.get(0, CONTACTvars);
+}
+void FLASHvariables::initialize() 
+{
+  // If data not found on flash RAM initialize all vars
+  strcpy(unitName, "CONTACT");
+  strcpy(unitDesc, "Physical Location");
+
+  unitFreq = 0;
+
+  lat = 0.00; lng = 0.00;
+
+  isGateway = 0; // Default is SMS Unit 
+  
+  strcpy(ssid,    "not-defined");
+  strcpy(ssidPwd, "not-defined");  
+  
+  strcpy(smsServer, "not-defined");
+  strcpy(dataServer, "not-defined");
+
+  strcpy(helpMessage, "I need Help, immedialty!");
+
+  tstVar = 111;
+
+  EEPROM.put(0, CONTACTvars);
+  EEPROM.commit();  
+}
+
+```
+
+The interface is divided into two parts to specify data. The first allows you to specify the name with which you want to identify or make known in the communications to the unit, in addition to the frequency of communications to be used according to the region or the country in which you live. The unit will always start working in the frequency of 900Mhz (ISM band), for this reason it is not necessary to be specific if you want to maintain that frequency.
+
+The second part of the data allows you to specify that the unit connect to another network to read all the data sent to any unit and send them to another network, the Internet or another platform.
+
+![Contact Setup Screen](/Platform/images/setup.png)
+
+The code was written in HTML, Javascript and CSS.
+
+[Click here to view the Code](https://github.com/Contact-Platform/Contact/blob/master/Platform/interfaces/setup/unit-setting.html "Setup Screen Code")
+
+### Gateway Interface
+
+This interface allows the unit that has been configured as a Gateway to receive all the data sent between the Units in their range and send these to an external platform in a network or through the Internet. The code will read in time intervals the data received in the Gateway Unit and send them to the address indicated in the Setup screen.
+
+![Gateway Confirmation Screen](/Platform/images/gateway.png)
+
+The code was written in HTML, Javascript and CSS.
+
+[Click here to view the Code](https://github.com/Contact-Platform/Contact/blob/master/Platform/interfaces/gateway/pushsms.html "Setup Screen Code")
 
 [Hardware Code]: https://github.com/Contact-Platform/Contact/blob/master/Platform/device/device.ino "Contact Main Code"
 

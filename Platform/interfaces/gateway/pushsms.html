@@ -142,6 +142,45 @@
                 pushSMSs();
             }
         }  
+
+   
+       function pushSMSs() {
+            getUnitSetup();
+            if (smsServer.length < 1) {
+                alert('NO SMS Server Setted.');
+            }
+            aSMS.forEach(function(sms, i) {
+                var jsonSMS = {content: sms} ;
+                fetch(smsServer , {
+                    method: 'post',
+                    body: JSON.stringify(jsonSMS)
+                }).then(function(response) {
+                    return response.json();
+                }).then(function(data) {
+                    console.log(data.html_url);
+                })
+                .catch(function(error) {  
+                    console.log('Request failed', error);
+                }); 
+            });
+            
+        }        
+
+        function getUnitSetup() {
+            console.log('Getting Unit Setup Values.');
+            fetch('getsetup?id=1234', {mode: 'no-cors'})
+                .then(response =>response.json())
+                .then(json => {                
+                    console.log('JSON Len: ', json.data);
+                    console.log('JSON: ', json.data[0]);
+                    if (json.data.length > 0) {
+                        smsServer = json.data[0]['smsserver'];
+                    }
+                })
+                .catch(function(error) {  
+                    console.log('Request failed', error);
+            });
+        }              
        
     </script>
 </body>

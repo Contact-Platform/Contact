@@ -25,9 +25,8 @@ Well-conceived and effectively delivered emergency messages can help ensure publ
 
 ![Selecting Locations to communicate](/Platform/images/sending-msg.png)
 
-<a href="https://youtu.be/MLwHU5oP0mU" target="_blank"><img src="Platform/images/contact-logo.png" 
-alt="Contact Video" width="100" height="auto" border="10" />&nbsp;Click here see a video with a demo.</a>
-
+<a href="https://youtu.be/MLwHU5oP0mU" target="_blank">
+<p>Click here see a video with a demo.</p></a>
 
 - Contact code allows each unit to extend the distance by replicating any message up to two more units, creating a simple MESH by using a lifetime for each data packet that has been sent.
 
