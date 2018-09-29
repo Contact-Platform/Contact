@@ -1,6 +1,4 @@
-<div id="top"></div>
-
-# Contact's Node.js API
+# Contact API
 
 [contact-home]: https://github.com/Contact-Platform/Contact/tree/master/Platform
 [contact-demo]: https://contact-app.mybluemix.net/
@@ -477,4 +475,4 @@ Here are some screenshots of what we did with ours so feel free to make this you
 - [IBM Continuous Delivery](https://www.ibm.com/cloud/continuous-delivery): Embrace DevOps in an enterprise-ready way. Create toolchains that support your app delivery tasks. Automate builds, tests, deployments, and more.  
 - [MapBox](https://www.mapbox.com/): An open source mapping platform for custom designed maps. Our APIs and SDKs are the building blocks to integrate location into any mobile or web app.  
 
-[Jump back to top](#top)
+[Jump back to top](#Contact-API)
