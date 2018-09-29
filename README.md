@@ -6,14 +6,9 @@ An open platform that brings together software and hardware to allow everyone to
 ![Contact Concept](/Platform/images/concept.png)
 
 ## Why did we create CONTACT?
-During and after an emergency, communication with communities is critical.
-
-Helping people at all levels to communicate empowers them to recognize important issues and find common grounds for action, and builds a sense of identity and participation in order to implement decisions.
+During and after an emergency the communication communities is critical. Helping people at all levels to communicate empowers them to recognize important issues and find common grounds for action, and builds a sense of identity and participation in order to implement decisions.
 
 Well-conceived and effectively delivered emergency messages can help ensure public safety, protect property, facilitate response efforts, elicit cooperation, instill public confidence, and help families reunite.
-
-<a href="https://youtu.be/MLwHU5oP0mU" target="_blank"><img src="Platform/images/contact-logo.png" 
-alt="Contact Video" width="200" height="auto" border="10" /></a>
 
 > Delivering effective emergency communications is an essential part of emergency management. We have learned through the experience of Hurricane Maria first that the people around you respond more quickly than the government. Second, although government assistance is available, coordination between people and agencies is needed, and communication is necessary for this.
 
@@ -29,6 +24,9 @@ alt="Contact Video" width="200" height="auto" border="10" /></a>
 - It's the same as using the Internet in a Hotspot. It is not necessary to download additional applications, you only need a device with WiFi and a Web Browser.
 
 ![Selecting Locations to communicate](/Platform/images/sending-msg.png)
+
+<a href="https://youtu.be/MLwHU5oP0mU" target="_blank"><img src="Platform/images/contact-logo.png" 
+alt="Contact Video" width="200" height="auto" border="10" /></a>
 
 - Contact code allows each unit to extend the distance by replicating any message up to two more units, creating a simple MESH by using a lifetime for each data packet that has been sent.
 
