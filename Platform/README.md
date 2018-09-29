@@ -278,5 +278,27 @@ The code was written in HTML, Javascript and CSS.
 
 [Click here to view the Code](https://github.com/Contact-Platform/Contact/blob/master/Platform/interfaces/gateway/pushsms.html "Setup Screen Code")
 
+### Data Form - Custome Interface
+
+This code is an example of the capabilities of the Contact Platform. The example demonstrates how an external interface can be developed to send data through the Contact Platform.
+
+![Other Data Form Screen](/Platform/images/data-form.png)
+
+
+It is important that the code indicates to which unit you want to send the data, which can be a Contact Gateway.
+
+```javascript
+    function sendData() {
+        var jsonData = jsonForm(document.getElementById('form'));
+        SendToServer(jsonData, '<your-unit-name>'); 
+        document.getElementById('datos').innerHTML += 
+            '<pre>'  + jsonData + '</pre><br>';            
+    }
+```
+
+The code was written in HTML, Javascript and CSS. 
+
+[Click here to view the Code](https://github.com/Contact-Platform/Contact/blob/master/Platform/interfaces/other-data-example/form-data.html "Data Form Code")
+
 [Hardware Code]: https://github.com/Contact-Platform/Contact/blob/master/Platform/device/device.ino "Contact Main Code"
 
