@@ -28,7 +28,11 @@ The main functionality of Contact is the ability to communicate between differen
 
 ![Contact Detail Architecture](/Platform/images/contact-how-work.png)
 
+The contact functions are due to the understanding of many disciplines in technology related to hardware, software and communications. The following image presents in greater detail how the elements integrated in contact work.
+
 ![Contact Detail Architecture](/Platform/images/contact-detail-architecture.png)
+
+The orchestration of all this technology allows it to be simple in its use and implementation, besides offering the opportunity to grow as a platform.
 
 
 ## Contact's Back-end - Code
