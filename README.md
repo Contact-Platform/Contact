@@ -19,8 +19,7 @@ Well-conceived and effectively delivered emergency messages can help ensure publ
 ## How does it Work?
 - Contact combines the use of an IoT device that includes a LoRa transmitter and an ESP32 microcontroller to provide communication access up to eight miles away.
 
-![Contact Hardware](/Platform/images/hardware.png)
-*Inside a Contact Box*
+![Contact Detail Architecture](/Platform/images/contact-how-work.png)
 
 - It's the same as using the Internet in a Hotspot. It is not necessary to download additional applications, you only need a device with WiFi and a Web Browser.
 
@@ -62,6 +61,8 @@ Well-conceived and effectively delivered emergency messages can help ensure publ
 
 - It uses *rechargeable batteries* (3.7v 3.6aH, 18650) that can extend its use up to *30 continuous hours*. It *can be recharged and used with any usb micro "b" power source*, such as power banks for cell phones, small solar panels or the Eton Red Cross Charger.
 
+![Contact Hardware](/Platform/images/hardware.png)
+*Inside a Contact Box*
 
 ### Scalability
 - It uses a *frequency free of licenses* for Industry, Science and Medicine (900-Mhz frequencies, ISM band) in the United States. But it is possible to select **other LoRa license-free frequencies for other Countries** through a configuration screen.

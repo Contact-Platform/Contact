@@ -26,6 +26,8 @@ alt="Contact Video" width="100" height="auto" border="10" /><p>&nbsp;Click here 
 ## Contact Architecture
 The main functionality of Contact is the ability to communicate between different devices. Contact uses WiFi communication to receive the data that it wants to transmit and in turn so that the user can request the data. The Contact code allows each unit to work as a Hotspot and Web Server at the same time. Through the Web Server in Contact the user can access different functions, such as a chat for communication between the Contact units, configuration screens for the units and screens that allow reading data sent through the Contact units and sending that data to other networks or the Internet.
 
+![Contact Detail Architecture](/Platform/images/contact-how-work.png)
+
 ![Contact Detail Architecture](/Platform/images/contact-detail-architecture.png)
 
 
