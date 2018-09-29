@@ -12,7 +12,7 @@ Well-conceived and effectively delivered emergency messages can help ensure publ
 
 > Delivering effective emergency communications is an essential part of emergency management. We have learned through the experience of Hurricane Maria first that the people around you respond more quickly than the government. Second, although government assistance is available, coordination between people and agencies is needed, and communication is necessary for this.
 
-In emergency situations it is important to know the needs and emotions of all involved, but process all the field data its practically imposible.  For that reason, our solution, it is also designed to help you understand what your users are saying by usign an Artificially Inteligence system. Our solution can receives messages and analyzes them for sentiment,  emotional tone and identify the keywords in the conversations. Storing all the data in a database and visualize it through charts, graphs and maps can help you make appropriate and informed decisions on emergency situations and logistics understanding what people need and their emotion.
+In emergency situations it is important to know the needs and emotions of all involved, but process all the field data its practically imposible.  For that reason, our solution, it is also designed to help you understand what your users are saying by usign an Artificially Inteligence system. Our solution can receives messages and analyzes them for sentiment,  emotional tone and identify the keywords in the conversations. Storing all the data in a database and visualize it through charts, graphs and maps can help you make appropriate and informed decisions on emergency situations and logistics understanding what people need and their emotion. [Contact + IBM]
 
 ## Contact as a Project 
 ![Solution Roadmap](/Platform/images/solution-roadmap.png)
@@ -149,6 +149,8 @@ That is a reason why we provide a complete *Open Communication Platform* that al
 [Customized Data Form]: https://github.com/jdastas/contact-platform/Platform/interfaces/data-form.html "Data Form Demo"
 
 [Contact API]: https://contact-app.mybluemix.net/ "Contact API"
+
+[Contact + IBM]: https://contact-app.mybluemix.net/ "Contact API"
 
 [Contact API - Demo]: https://contact-app.mybluemix.net/ "Contact API"
 [Contact API - Github]: https://github.com/javierdastas/Contact/tree/master/API "Contact API Code"
