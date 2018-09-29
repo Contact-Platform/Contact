@@ -35,15 +35,6 @@ In this project we demonstrate our Node.js API, based on the Express framework, 
 
 ## Steps
 
-**Quick links**  
-[Step 1. Clone the repository](#1.-Clone-the-repository)  
-[Step 2. cd into this project's root directory](#2.-cd-into-this-project's-root-directory)  
-[Step 3. Make sure Node.js is installed in your computer](#3.-Make-sure-is-installed-in-your-computer)  
-[Step 4. Install dependencies](#4.-Install-dependencies)  
-[Step 5. Create Watson services with IBM Cloud](#5.-Create-Watson-services-with-IBM-Cloud)  
-[Step 6. Configure your Credentials](#6.-Configure-your-Credentials)  
-[Step 7. Run your API locally](#7.-Run-your-API-locally)
-
 ### 1. Clone the repository
 
 ```bash
