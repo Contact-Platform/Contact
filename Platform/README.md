@@ -182,6 +182,9 @@ https://github.com/Contact-Platform/Contact/blob/master/Platform/device/device.i
 ### Main Application Interface
 
 The main screen of the web application integrated in the Contact web server allows users to send messages to the other units. The code also asks the unit, at intervals of time, for the information that the unit has received. Another function that allows is to send the messages written by the user. Also, to send messages requesting help, in time intervals. This happens when the beacon option is active. It also sends certain time intervals information related to the unit, this allows the other units to know what units are available to make contact. 
+
+[Click here to view the Code](https://github.com/Contact-Platform/Contact/blob/master/Platform/interfaces/main/main-screen.html "Main Screen Code")
+
 The code was written in HTML, Javascript and CSS.
 
 ![Selecting Locations to communicate](/Platform/images/msg-units-selection.png)
@@ -232,7 +235,6 @@ String geoLocation() {
 
 ![Beacon On](/Platform/images/beacon-active.png)
 
-[Click here to view the Code](https://github.com/Contact-Platform/Contact/blob/master/Platform/interfaces/main/main-screen.html "Main Screen Code")
 
 ### Setup Interface
 
