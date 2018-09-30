@@ -197,6 +197,7 @@ The code was written in HTML, Javascript and CSS.
 
 *Sending a Message to selected Online Locations*
 
+#### Beacon Alert
 It allowing it to be used as a Beacon to locate people in other rescue situations. 
 ```cpp
 // GPS UNIT SETTINGS FOR BEITIAN BN-180 GPS Module
