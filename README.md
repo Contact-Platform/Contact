@@ -26,6 +26,7 @@ In emergency situations it is important to know the needs and emotions of all in
 - But Contact is not just a communication device, it is an **Open and Portable Communication Platform**. Contact is a bridge to many possibilities since it allows the integration of other tools or platforms, increasing the analysis of the data communicated, the logistics and the hope of knowing that **someone is listening to the request of a helping hand**.
 
 ![Contac Api Architecture](/API/images/architecture.png)
+*Contact is a bridge to many possibilities*
 
 - It's the same as using the Internet in a Hotspot. It is not necessary to download additional applications, you only need a device with WiFi and a Web Browser.
 
