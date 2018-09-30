@@ -154,7 +154,7 @@ The Contact API is **designed to help _you_ understand what your users are sayin
 
 Visit the [Contact API] to see it up and running.
 
-That is a reason why we provide a complete *Open Communication Platform* that allows others to control the hardware and the data directly; the people can create custom interfaces and even send the data to other platforms.
+That is a reason why we provide a complete *Open and Portable Communication Platform* that allows others to control the hardware and the data directly; the people can create custom interfaces and even send the data to other platforms.
 - [Platform Code on Github]
 
 [Call for Code]: (http://callforcode.org) "Call for Code"
