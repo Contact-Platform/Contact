@@ -5,7 +5,8 @@ An open platform that brings together software and hardware to allow everyone to
 
 ![How does Contact work](/Platform/images/contact-how-work-no-title.png)
 <a href="https://youtu.be/MLwHU5oP0mU" target="_blank">
-Click here to see a demo video.</a>
+Click here to see a demo video of Contact.</a>
+
 <a href="https://youtu.be/3B9AbOJu10c" target="_blank">
 Click here to see a demo video usign the Beacon option.</a>
 
