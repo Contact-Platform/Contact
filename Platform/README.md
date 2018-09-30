@@ -234,8 +234,6 @@ String geoLocation() {
 
 ![Beacon Screen](/Platform/images/beacon-option.png)
 
-![Beacon On](/Platform/images/beacon-active.png)
-
 
 ### Setup Interface
 
