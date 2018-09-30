@@ -245,20 +245,20 @@
       
             line-height: 29px;
         }
-        @keyframes help-flash {
+        @keyframes h-flash {
             0%   {background-color: red;}
             25%  {background-color: #ff9999;}
             50%  {background-color: red;}
             100% {background-color: #ff9999;}
         }
 
-        #help-me {        
+        #h-me {        
             margin-top: 10px;
             padding-left: 4px;
             margin-left: 2px;
             padding-top: 3px;
-            background-color: var(--help-bg);
-            background-image: var(--help-bg-image);
+            background-color: var(--h-bg);
+            background-image: var(--h-bg-image);
             background-repeat: var(--no-repeat);
             background-position: 50% 35%;
             background-size:60%;  
@@ -275,11 +275,11 @@
       
             line-height: 29px;
 
-            animation-name: help-flash;
+            animation-name: h-flash;
             animation-duration: 1s;
             animation-iteration-count: infinite;
         }
-        #help-me:hover::after {
+        #h-me:hover::after {
             position:absolute;
             z-index: inherit;
             margin-left: 25px;
@@ -328,13 +328,13 @@
 
             animation: rotate-in 3s;
         }
-        .fabicon-select {
+        .fi-select {
             -webkit-transition: all 1s;
             -webkit-transform: rotateZ(225deg); 
             transform: rotateZ(225deg);
             transition: all 1s; 
         }
-        .fabicon-unselect {
+        .fi-unselect {
             -webkit-transition: all 1s;
             -webkit-transform: rotateZ(0deg);
             transform: rotateZ(0deg);
@@ -381,13 +381,13 @@
             background-size:60%;                                    
         }        
         :root {
-            --help-bg: #ff4444;
-            --help-bg-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ2OS4zMzMgNDY5LjMzMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDY5LjMzMyA0NjkuMzMzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTIzNC42NjcsMzJMMCw0MzcuMzMzaDQ2OS4zMzNMMjM0LjY2NywzMnogTTI1NiwzNzMuMzMzaC00Mi42Njd2LTQyLjY2N0gyNTZWMzczLjMzM3ogTTIxMy4zMzMsMjg4di04NS4zMzNIMjU2VjI4OCAgICBIMjEzLjMzM3oiIGZpbGw9IiNGRkZGRkYiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+            --h-bg: #ff4444;
+            --h-bg-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ2OS4zMzMgNDY5LjMzMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDY5LjMzMyA0NjkuMzMzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTIzNC42NjcsMzJMMCw0MzcuMzMzaDQ2OS4zMzNMMjM0LjY2NywzMnogTTI1NiwzNzMuMzMzaC00Mi42Njd2LTQyLjY2N0gyNTZWMzczLjMzM3ogTTIxMy4zMzMsMjg4di04NS4zMzNIMjU2VjI4OCAgICBIMjEzLjMzM3oiIGZpbGw9IiNGRkZGRkYiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
             --no-repeat: no-repeat;
         }
         ul li:nth-child(2) {
-            background: var(--help-bg);
-            background-image:  var(--help-bg-image) ;
+            background: var(--h-bg);
+            background-image:  var(--h-bg-image) ;
             background-repeat: var(--no-repeat);
             background-position:50% 40%;
             background-size:60%;            
@@ -423,7 +423,7 @@
           visibility: hidden;
         }
 
-        #help-req {
+        #h-req {
             position: absolute;
             z-index: 4000;
             margin: 0px;
@@ -432,7 +432,7 @@
             top: 0px; left: 0px;   
             overflow: hidden;      
         }
-        #help-content {
+        #h-content {
             position: relative;
             margin: 0 auto;
             color: white;  
@@ -441,15 +441,15 @@
             text-align: center;
             vertical-align: middle;
         }
-        #help-content > h1 {
+        #h-content > h1 {
             margin-top: 10%;
         }
-        #help-content > h3 {
+        #h-content > h3 {
             font-weight: normal;
             color: #999999;
             text-shadow: 0px 0px 3px black;
         }
-        #help-close {
+        #h-close {
             position: absolute;
             display: inline-block;
             right: 10px;
@@ -557,7 +557,7 @@
   animation-direction: alternate;
 }
 
-#msg-panel {
+#m-panel {
     position: absolute;
     z-index: 2500;
     width: 100%;height: 100%;
@@ -566,7 +566,7 @@
     top: 0px; left: 0px;   
     overflow: hidden;  
 }
-#msg-box {
+#m-box {
     display: block;
     margin-top: 15%;    
     margin-left: 2%;
@@ -579,16 +579,16 @@
     box-shadow: 0px 0px 10px black;
     background: ghostwhite;
 }
-#msg-box > div:first-child {
+#m-box > div:first-child {
     border: 1px solid whitesmoke;
     padding: 6px;
     height: 75%;
 }
-#msg-box > div:last-child {
+#m-box > div:last-child {
     text-align: right;
     padding: 8px;
 }
-#msg-box > div:last-child div {
+#m-box > div:last-child div {
     display: inline-block;
     height: 32px;
     padding: 3px 7px;
@@ -602,11 +602,11 @@
     box-shadow: 0px 0px 4px #333;
     border: none;
 }
-#msg-box > div:last-child div:active, #msg-box > div:last-child div:hover {
+#m-box > div:last-child div:active, #m-box > div:last-child div:hover {
     box-shadow: none;
     background: #263238;
 }
-#msg-box > div:last-child div:last-child {
+#m-box > div:last-child div:last-child {
     display: inline-block;
     border-radius: 3px;
     height: 32px;
@@ -619,8 +619,8 @@
     box-shadow: 0px 0px 4px #333;
     border: none;
 }
-#msg-box > div:last-child div:last-child:active, 
-#msg-box > div:last-child div:last-child:hover {
+#m-box > div:last-child div:last-child:active, 
+#m-box > div:last-child div:last-child:hover {
     box-shadow: none;
     background: #0d47a1;
 }
@@ -868,18 +868,18 @@ textarea {
         line-height: 2.37;
         font-size: 1.75em;
     } 
-    #help-content {
+    #h-content {
         margin-top: 30%;
     }
-    #msg-box {
+    #m-box {
         width: 97vw;
         left: -4px;
         padding: 4px 2px 2px;
     }
-    #msg-box > div:first-child{
+    #m-box > div:first-child{
         padding: 2px;
     }
-    #msg-box > div:last-child {        
+    #m-box > div:last-child {        
         padding: 0px;
     }    
     textarea {
@@ -913,7 +913,7 @@ textarea {
     ul li:last-child {
         padding-top: 13px;
     }   
-    #msg-box {
+    #m-box {
         margin-left: 15%;
         height: 30%;
         width: 70%;
@@ -967,7 +967,7 @@ textarea {
                     <li class='hide fab-menu-init' onclick='ToggleHelp();'>&nbsp;</li>
                     <li class='hide fab-menu-init' onclick='ToggleHelp();'>&nbsp;</li>
                 </ul>                
-                <div id='fab-icon' class='fabicon-unselect'
+                <div id='fab-icon' class='fi-unselect'
                     onclick='ToggleFab();'>&#65291;</div>
             </div>
         </div>
@@ -988,7 +988,7 @@ textarea {
                 onclick='TogglePanel();'>&#65291;</div>
             <div id='settings' style='display:block;'
                 onclick='openForm();'>&#8943;</div>
-            <div id='help-me' class='help-me hide'></div>
+            <div id='h-me' class='h-me hide'></div>
         </div>
     </div>
     <div id='user-set' class='hide'>
@@ -1001,8 +1001,8 @@ textarea {
         </div>
     </div>
 
-    <div id='help-req' class='hide'>
-        <div id='help-content'>
+    <div id='h-req' class='hide'>
+        <div id='h-content'>
             <h1>Emergency Request Notification</h1>
             <h3>This Notification Service reach all communities networks.</h3>
             <div id='onoff-switch' >
@@ -1018,11 +1018,11 @@ textarea {
                 </div>
             </div>
         </div>
-        <div id='help-close' onclick='ToggleHelp();'>&#x2715;</div>
+        <div id='h-close' onclick='ToggleHelp();'>&#x2715;</div>
     </div>
 
-    <div id='msg-panel' class='hide'>
-        <div id='msg-box'>
+    <div id='m-panel' class='hide'>
+        <div id='m-box'>
             <div>
                 <textarea id='msg' autofocus maxlength='280'
                     rows='3'
@@ -1055,10 +1055,11 @@ textarea {
             <div>
                 <input type='button' id='btnReset' value='Reset Chat'
                     onclick='resetChat();'>
-                <input type='button' value='Cancel' 
-                    id='cancel' onclick='closeForm();'>
+                &nbsp;&nbsp;&nbsp;
                 <input type='button' value='Save' 
                     id='save' onclick='saveForm();'>                    
+                <input type='button' value='Close' 
+                    id='cancel' onclick='closeForm();'>                
             </div>
             </form>
         </div>
@@ -1068,6 +1069,7 @@ textarea {
     var bFirstTime = true;
     var bResquestingHelp = false;
     var user = '';
+    var unitName = '';
     var unitLocation = '';
 
     var chkedUnits = "";
@@ -1085,8 +1087,9 @@ textarea {
     }
     else
     {
-        document.getElementById('user-set').classList.toggle('hide');
-        document.getElementById('user-set').classList.toggle('user-set-show');
+        var us = document.getElementById('user-set');
+        us.classList.toggle('hide');
+        us.classList.toggle('user-set-show');
         document.getElementById('user').focus();
 
         sessionStorage.setItem('bFistTime',  false);
@@ -1103,8 +1106,9 @@ textarea {
     function setUser() {
         user = document.getElementById('user').value;
         if (user.length > 0) {
-            document.getElementById('user-set').classList.toggle('user-set-show');
-            document.getElementById('user-set').classList.toggle('hide');
+            var us = document.getElementById('user-set');
+            us.classList.toggle('user-set-show');
+            us.classList.toggle('hide');
             /*document.getElementById('id-user').innerText = user;*/
             sessionStorage.setItem('user',  user);
         }
@@ -1117,8 +1121,9 @@ textarea {
         document.getElementById('icon').classList.toggle('icon-select');
     }
     function ToggleFab() {
-        document.getElementById('fab-icon').classList.toggle('fabicon-select');
-        document.getElementById('fab-icon').classList.toggle('fabicon-unselect');
+        var fi = document.getElementById('fab-icon');
+        fi.classList.toggle('fi-select');
+        fi.classList.toggle('fi-unselect');
 
         var items = Array.from(document.getElementById('fab-menu').getElementsByTagName('li'));
         items.forEach(function(li, i, items) {
@@ -1129,27 +1134,23 @@ textarea {
     }
 
     function ToggleHelp() {
-        if (document.getElementById('fab-icon').className.includes('fabicon-select'))
+        if (document.getElementById('fab-icon').className.includes('fi-select'))
             ToggleFab();        
-        document.getElementById('help-req').classList.toggle('hide');
+        document.getElementById('h-req').classList.toggle('hide');
         document.getElementById('round-switch').classList.toggle('no-display');
 
         if (document.getElementById('myonoffswitch').checked == true) {
-            document.getElementById('help-me').classList.remove('hide');
-            RequestHelp();
-            nReqHelpId = setInterval(RequestHelp, 10000);
+            document.getElementById('h-me').classList.remove('hide');
+            if (nReqHelpId == 0) {                
+                RequestHelp();                  
+                nReqHelpId = setInterval(RequestHelp, 10000);                      
+            }
         }
         else {
-            document.getElementById('help-me').classList.add('hide');
             clearInterval(nReqHelpId);
+            nReqHelpId = 0;
+            document.getElementById('h-me').classList.add('hide');
         }
-    }
-
-    function RequestHelp() {
-        console.log('** Request Help');
-        aUnits.forEach(function(val,i){
-            console.log('Dev #' + i + ' ' + val);
-        });
     }
 
     function SendMessage() {
@@ -1172,15 +1173,14 @@ textarea {
         }
         if (msg.value.length >= 2) {
             var tmp = chkedUnits.slice(0, -1);
-            chat.innerHTML += ('<li class="me">' +
+            var cm = ('<li class="me">' +
                 msg.value + '<br><div class="devrx">' +
                     'sended to [' + tmp + ']</div></li>');
+            chat.innerHTML += cm;
 
             var newMsgs = '';
             newMsgs = (localStorage.getItem('chat') != null?
-                localStorage.getItem('chat'):'') + ('<li class="me">' +
-                msg.value + '<br><div class="devrx">' +
-                    'sended to [' + tmp + ']</div></li>');
+                localStorage.getItem('chat'):'') + cm;
             localStorage.setItem('chat', newMsgs);
 
             aUnits.forEach(function(devUnit, i, aUnits) {
@@ -1199,13 +1199,13 @@ textarea {
         settings.style.display = (settings.style.display == 'block'?
             'none': 'block');
             
-        if (document.getElementById('fab-icon').className.includes('fabicon-select'))
+        if (document.getElementById('fab-icon').className.includes('fi-select'))
             ToggleFab();
-        document.getElementById('msg-panel').classList.toggle('hide');
+        document.getElementById('m-panel').classList.toggle('hide');
     }  
 
     function SendToServer(msg, unit) {
-        console.log('Send');    
+   
          fetch('put?message=' + msg + '&unit=' + unit + '&usr=' + user
             , {mode: 'no-cors'})
             .then(response => response.json())
@@ -1216,7 +1216,7 @@ textarea {
     }      
 
     function DeviceNotify() {
-        console.log('** Device Broadcast');
+  
         var devInfo = '{"uname":"", "location":"Physical Location", "lat": 18.38, "long":66.16}';
         if (localStorage.getItem('location') === null)
             localStorage.setItem('location', devInfo);
@@ -1232,7 +1232,7 @@ textarea {
     }
 
     function GetDeviceList() {
-        console.log('** Request Dev List');
+
         var devs = '';
         fetch('getdev?a=1', {mode: 'no-cors'})
             .then(response => response.json())
@@ -1261,17 +1261,17 @@ textarea {
         
         if ((localStorage.getItem('chat') != null) && (bFirstTime)) {            
             document.getElementById('chat').innerHTML = localStorage.getItem('chat');            
-            console.log('Readed from LocalStorage.');
+
             var ChatDiv = document.getElementById('chat-content');
             ChatDiv.scrollTop = ChatDiv.scrollHeight; 
         }
-        console.log('Reading from Device.');
+
         fetch('get?lastMsg=' + lastMsgReaded + '&fistTime=' + (bFirstTime?1:0), {mode: 'no-cors'})
             .then(response => response.json())
             .then(json => {
                 var msgs = "";
                 if (json.data.length > 0) {
-                    console.log('Messages Readed. JSON Data on Page.');                    
+
                     for(i = 0; i < json.data.length; i++) {
                         msgs += '<li class="him"><div id="dev-usr">' +
                         json.data[i]['txid'] + '</div>'
@@ -1285,8 +1285,6 @@ textarea {
                         newMsgs = msgs;
                     else
                         newMsgs = localStorage.getItem('chat') + msgs;
-                    console.log('Message Structure: ');
-                    console.log(newMsgs);
 
                     localStorage.setItem('chat', newMsgs);
                                         
@@ -1302,6 +1300,30 @@ textarea {
                 console.log('Request failed', error);
             });
     }  
+
+    function RequestHelp()     
+    {
+        /* Beacon Function */
+        getSomeVars();  
+        var e = document.getElementById('emergency');
+        var alertMsg = (e.value.length > 0 ?
+        e.value : 'Please I need Help.');
+        alertMsg += ('I am ' + unitName + ' in ' +
+            document.getElementById('location').value);
+
+        var chat = document.getElementById('chat');
+        var cm = ('<li class="me need-help">&nbsp;' +
+            alertMsg + '<br><div class="devrx">' +
+                'sended to [ALL]</div></li>');
+        chat.innerHTML += (cm);
+
+        var newMsgs = '';
+        newMsgs = (localStorage.getItem('chat') != null?
+            localStorage.getItem('chat'):'') + cm;
+        localStorage.setItem('chat', newMsgs);
+
+        SendToServer(alertMsg, 'ALL');
+    }
 
     function check(sender, devUnit) {
         if (sender.innerHTML.charCodeAt(0) == 9745) {
@@ -1324,8 +1346,7 @@ textarea {
 
     function saveForm() {
         var loc = document.getElementById('location').text;
-        /*var devInfo = '{"uname":"", "location":'  +
-            '"' + loc + '", "lat": 18.38, "long":66.16}'; */
+        
         var devInfo = '';
         localStorage.setItem('location', devInfo);
         localStorage.setItem('emergency', 
@@ -1334,28 +1355,30 @@ textarea {
         saveFormData();            
     }
     function closeForm() {
-        document.getElementById('forma-panel').classList.toggle('hide');
-        document.getElementById('forma-panel').classList.toggle('forma-show'); 
+        var fp = document.getElementById('forma-panel');
+        fp.classList.toggle('hide');
+        fp.classList.toggle('forma-show'); 
     }
 
     function resetChat() {
-        console.log('** Reset Chat');
+
         if (localStorage.getItem('chat') != null) 
             localStorage.setItem('chat', ''); 
         var devInfo='{\"uname\":\"\", \"location\":\"Physical Location\", \"lat\": 18.2208, \"long\":66.5901}'; 
         if (localStorage.getItem('location')==null) 
             localStorage.setItem('location', devInfo);        
         document.getElementById('chat').innerHTML('');
-        console.log('   Chat Reseted');        
+
     }
 
     function getSomeVars() {
-        console.log('Getting Unit Setup Values.');
+
         fetch('getsomevars?id=1234', {mode: 'no-cors'})
             .then(response =>response.json())
             .then(json => {                
-                console.log('JSON: ', json.data[0]);
+
                 if (json.data.length > 0) {
+                    unitName = json.data[0]['unit'];
                     unitLocation = json.data[0]['location'];
                     document.getElementById('location').value = json.data[0]['location'];
                     document.getElementById('emergency').value = json.data[0]['helpmsg'];
@@ -1372,7 +1395,6 @@ textarea {
         dataVars += ('&location=' +
             document.getElementById('location').value);
 
-        console.log(dataVars);
         fetch('putsomevars?' + dataVars, {mode: 'no-cors'})
             .then(response => response.json())
             .then(json => console.log(json))
