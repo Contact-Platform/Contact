@@ -129,7 +129,7 @@ In emergency situations it is important to know the needs and emotions of all in
 
 - *Beacon and Geolocation Integration*. It allowing it to be used as a Beacon to locate people in other rescue situations. By using a powerful open-technology microcontroller (ESP32) you can extend the capacity of the device while maintaining low cost and performance. 
 
-[<img src='/Platform/images/contact-small-logo.png' width='40px'>&nbsp;Click here to see a demo video using the Beacon option.](https://youtu.be/3B9AbOJu10c "Beacon Demo")
+[<img src='/Platform/images/contact-small-logo.png' width='140px'>&nbsp;Click here to see a demo video using the Beacon option.](https://youtu.be/3B9AbOJu10c "Beacon Demo")
 
 ![Beacon Screen](/Platform/images/beacon-option.png)
 
