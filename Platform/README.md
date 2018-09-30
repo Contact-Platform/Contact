@@ -194,6 +194,44 @@ The code was written in HTML, Javascript and CSS.
 
 *Sending a Message to selected Online Locations*
 
+It allowing it to be used as a Beacon to locate people in other rescue situations. 
+```cpp
+// GPS UNIT SETTINGS FOR BEITIAN BN-180 GPS Module
+#include <TinyGPS++.h>
+
+HardwareSerial GPSSerial(2);
+
+#define RXD2 16
+#define TXD2 17
+
+TinyGPSPlus gps;
+String strGeo = "";
+
+```
+```cpp
+String geoLocation() {
+  while (GPSSerial.available()) {
+    gps.encode(GPSSerial.read());
+  }
+
+  return ("{\"lat\":\"" + String(gps.location.lat(),5) + "\"," +
+          "\"log\":\"" + String(gps.location.lng(),5) + "\"," +
+          "\"sat\":\"" + String(gps.satellites.value()) + "\"," +
+          "\"date\":\"" + 
+          (gps.date.day() < 10 ? "0" : "") + String(gps.date.day()) + "/" + 
+          (gps.date.month() < 10 ? "0" : "") + String(gps.date.month()) + "/" + 
+          String(gps.date.year()) + "\"," +
+          "\"time\":\"" + (gps.time.hour() < 10 ? "0" : "") + String(gps.time.hour()) + 
+          ":" + (gps.time.minute() < 10 ? "0" : "") + String(gps.time.minute()) + "\"}");
+}
+```
+
+<a href='https://youtu.be/3B9AbOJu10c' target='_blank' alt='Beacon Demo')>Click here to see a demo video using the Beacon option.</a>
+
+![Beacon Screen](/Platform/images/beacon-option.png)
+
+![Beacon On](/Platform/images/beacon-active.png)
+
 [Click here to view the Code](https://github.com/Contact-Platform/Contact/blob/master/Platform/interfaces/main/main-screen.html "Main Screen Code")
 
 ### Setup Interface
