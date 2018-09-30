@@ -4,6 +4,11 @@
 An open platform that brings together software and hardware to allow everyone to communicate up to eight mile radius.
 
 ![How does Contact work](/Platform/images/contact-how-work-no-title.png)
+#### <a href="https://youtu.be/MLwHU5oP0mU" target="_blank">
+Click here to see a demo video.</a>
+#### <a href="https://youtu.be/3B9AbOJu10c" target="_blank">
+Click here to see a demo video usign the Beacon option.</a>
+
 
 ## Why did we create CONTACT?
 During and after an emergency the communication communities is critical. Helping people at all levels to communicate empowers them to recognize important issues and find common grounds for action, and builds a sense of identity and participation in order to implement decisions.
@@ -32,7 +37,7 @@ In emergency situations it is important to know the needs and emotions of all in
 
 ![Selecting Locations to communicate](/Platform/images/sending-msg.png)
 
-<a href="https://youtu.be/MLwHU5oP0mU" target="_blank">
+### <a href="https://youtu.be/MLwHU5oP0mU" target="_blank">
 <p>Click here to see a demo video.</p></a>
 
 - Contact code allows each unit to extend the distance by replicating any message up to two more units, creating a simple MESH by using a lifetime for each data packet that has been sent.
@@ -129,7 +134,7 @@ In emergency situations it is important to know the needs and emotions of all in
 
 - *Beacon and Geolocation Integration*. It allowing it to be used as a Beacon to locate people in other rescue situations. By using a powerful open-technology microcontroller (ESP32) you can extend the capacity of the device while maintaining low cost and performance. 
 
-### [Click here to see a demo video using the Beacon option.](https://youtu.be/3B9AbOJu10c "Beacon Demo")
+### <a href='https://youtu.be/3B9AbOJu10c' target='_blank' alt='Beacon Demo')>Click here to see a demo video using the Beacon option.</a>
 
 ![Beacon Screen](/Platform/images/beacon-option.png)
 
