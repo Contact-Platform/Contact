@@ -135,7 +135,7 @@ Click here to see a demo video usign the Beacon option.</a>
 
 - *Beacon and Geolocation Integration*. It allowing it to be used as a Beacon to locate people in other rescue situations. By using a powerful open-technology microcontroller (ESP32) you can extend the capacity of the device while maintaining low cost and performance. 
 
-### <a href='https://youtu.be/3B9AbOJu10c' target='_blank' alt='Beacon Demo')>Click here to see a demo video using the Beacon option.</a>
+### <a href='https://youtu.be/3B9AbOJu10c' target='_blank' alt='Beacon Demo'>Click here to see a demo video using the Beacon option.</a>
 
 ![Beacon Screen](/Platform/images/beacon-option.png)
 
