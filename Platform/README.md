@@ -230,7 +230,7 @@ String geoLocation() {
 }
 ```
 
-<a href='https://youtu.be/3B9AbOJu10c' target='_blank' alt='Beacon Demo'>Click here to see a demo video using the Beacon option.</a>
+#### <a href='https://youtu.be/3B9AbOJu10c' target='_blank' alt='Beacon Demo'>Click here to see a demo video using the Beacon option.</a>
 
 ![Beacon Screen](/Platform/images/beacon-option.png)
 
