@@ -9,8 +9,6 @@ During and after an emergency the communication communities is critical. Helping
 
 Well-conceived and effectively delivered emergency messages can help ensure public safety, protect property, facilitate response efforts, elicit cooperation, instill public confidence, and help families reunite.
 
-![Contact Platform Helping Concept](/Platform/images/contact-platform-helping-concept.png)
-
 > Delivering effective emergency communications is an essential part of emergency management. We have learned through the experience of Hurricane Maria first that the people around you respond more quickly than the government. Second, although government assistance is available, coordination between people and agencies is needed, and communication is necessary for this.
 
 In emergency situations it is important to know the needs and emotions of all involved, but process all the field data its practically imposible.  For that reason, our solution, it is also designed to help you understand what your users are saying. By usign an *Artificially Inteligence* system and a group of powerfull tools on the *Cloud*, created by IBM, our solution can receives messages and analyzes them for sentiment,  emotional tone and identify the repeating keywords in the conversations. Storing all the data in a database and visualize it through charts, graphs and maps can help you make appropriate and informed decisions on emergency situations and logistics understanding what people needs and their emotions. [Contact + IBM]
@@ -157,6 +155,9 @@ Visit the [Contact API] to see it up and running.
 
 That is a reason why we provide a complete *Open and Portable Communication Platform* that allows others to control the hardware and the data directly; the people can create custom interfaces and even send the data to other platforms.
 - [Platform Code on Github]
+
+
+![Contact Platform Helping Concept](/Platform/images/contact-platform-helping-concept.png)
 
 [Call for Code]: (http://callforcode.org) "Call for Code"
 
