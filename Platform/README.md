@@ -178,6 +178,7 @@ Another very important option is the ability to forward messages to other units.
 https://github.com/Contact-Platform/Contact/blob/master/Platform/device/device.ino "Unit Code")
 
 ## Contact's Front-end - Embedded Application Code
+Is important remember that the Contact's Front-end interfaces are web pages, those codes are integrated with the Contact Back-end code. For that reason, every time you modify the Font-end code *you need to merge the code with the Back-end code* to get the results on the Contact's user web interface.
 
 ### Main Application Interface
 
