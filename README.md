@@ -139,6 +139,22 @@ Click here to see a demo video usign the Beacon option.</a>
 
 ![Beacon On](/Platform/images/beacon-active.png)
 
+Beacause the Contact Unit is based on the Arduino open architecture we prepare the to use a small GPS module to offer more scalability.
+```cpp
+/********** GPS UNIT SETTINGS *************/
+#include <TinyGPS++.h>
+
+HardwareSerial GPSSerial(2);
+
+#define RXD2 16
+#define TXD2 17
+
+TinyGPSPlus gps;
+String strGeo = "";
+```
+![Contact Api Running](/Platform/images/contact-gps-module.png)
+[Click here to view the Unit code.](https://github.com/Contact-Platform/Contact/blob/master/Platform/device/device.ino "Contat Unit Code")
+
 ## CALL FOR CODE + CONTACT
 We believe that everyone has creative ideas. We, in response to [Call for Code], develop the **Contact** capabilities around the powerful tools of **IBM Cloud** to demonstrate that it is a powerful platform that can grow.
 
