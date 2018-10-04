@@ -203,7 +203,7 @@ void setup()
       hostName = CONTACTvars.unitName;
       
       WiFi.softAP(hostName); // Use as OPEN HOT SPOT Communication Device
-      // WiFi.softAP(hostName, CONTACTvars.unitPwd); 
+      // WiFi.softAP(hostName, CONTACTvars.unitPwd); // To set with Password
       delay(100); 
       Serial.println("Connected!");
     
@@ -678,8 +678,12 @@ void setup()
       // Gateway Page
       request->send(200, "text/html", delete_sms_cache());
   });  
-/*
+
   server.on("/geo", HTTP_GET, [](AsyncWebServerRequest *request) {
+    // This modules its only used to get the GEOLOCATION 
+    // from Mobile Devices.
+    // Is necessary create a Mobile App.
+    
     int paramsNumbr = request->params();
     if (paramsNumbr > 0) {
        AsyncWebParameter* p = request->getParam(0);
@@ -728,7 +732,7 @@ void setup()
       Serial.println("NOT Parameter Value Received.");
     }
   });  
-  */
+  
   server.begin();
   Serial.println("Webserver Started");
   
@@ -870,7 +874,7 @@ void onReceive(int packetSize) {
       char* all = "ALL";
       if (CONTACTvars.isGateway == 1) // If Unit is Gateway Receive Any Message
           root["rxid"] =  "ALL"; 
-     /* if ((strcmp(root["rxid"].as<char*>(), all) == 0) && ((root["ttl"].as<int>() - 1) > 0)
+      if ((strcmp(root["rxid"].as<char*>(), all) == 0) && ((root["ttl"].as<int>() - 1) > 0)
           && (strcmp(root["rxid"].as<char*>(), hostName) == 0))
         { // Mesh Network
           Serial.print("** Msg to Mesh ...");
@@ -880,7 +884,7 @@ void onReceive(int packetSize) {
           sendLoRaMsgToOther = true;
           return;
         }
-        */      
+              
       if ((strcmp(root["rxid"].as<char*>(), hostName) != 0) && 
           (strcmp(root["rxid"].as<char*>(), all) != 0)) {
             Serial.println("Ninguna");
