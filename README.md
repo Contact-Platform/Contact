@@ -139,7 +139,7 @@ Click here to see a demo video usign the Beacon option.</a>
 
 ![Beacon On](/Platform/images/beacon-active.png)
 
-Beacause the Contact Unit is based on the Arduino open architecture we prepare it to use a small GPS module to offer more scalability.
+Beacause the Contact Unit is based on the Arduino open architecture we prepare it to use a small GPS module to offer more scalability (recommended GPS module size is 0.4 x 0.4 inches).
 ```cpp
 /********** GPS UNIT SETTINGS *************/
 #include <TinyGPS++.h>
