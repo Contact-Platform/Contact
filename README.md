@@ -123,7 +123,7 @@ Click here to see a demo video usign the Beacon option.</a>
 ```
 [Customized Data Form]
 
-- It **can be used as a Network or Internet Gateway** to send all received messages to another network, the Internet,  [Contact API] or another platform such as Twilio.
+- It **can be used as a Network or Internet Gateway** to send all received messages to another network, the Internet,  [Contact API] or another platform such as Twitter or Twilio.
 
 ![Gateway Confirmation Screen](/Platform/images/gateway.png)
 
