@@ -80,7 +80,7 @@ Click here to see a demo video usign the Beacon option.</a>
 
 ![Contact Setup Screen](/Platform/images/setup.png)
 
-- It can be *used as an open network platform to send any form data*. It has sending or receiving functions through specific RESTful technology.
+- It can be *used as an open network platform to send any form data*. It has sending or receiving functions through specific RESTful technology. You can send or receive data from social networks.
 
 ![Data Form](/Platform/images/data-form.png)
 
