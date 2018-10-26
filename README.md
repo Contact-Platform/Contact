@@ -3,7 +3,7 @@
 ## What is CONTACT?
 An open platform that brings together software and hardware to allow everyone to communicate up to eight mile radius.
 
-![How does Contact work](/Platform/images/contact-how-work-no-title.png)
+
 ## Why did we create CONTACT?
 During and after an emergency the communication communities is critical. Helping people at all levels to communicate empowers them to recognize important issues and find common grounds for action, and builds a sense of identity and participation in order to implement decisions.
 
